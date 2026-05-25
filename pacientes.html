@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mario Dentals - Pacientes</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background-color: #f1f1f1; }
+    header { background-color: #004a7c; padding: 40px; text-align: center; color: white; border-bottom: 5px solid #000000; }
+    article { float: left; padding: 30px; width: 100%; background-color: #f1f1f1; min-height: 500px; }
+    .logo-dental { width: 150px; height: auto; border-radius: 10px; margin-bottom: 15px; background-color: white; padding: 10px; }
+    h2 { margin: 0; font-size: 40px; letter-spacing: 2px; }
+    .slogan { margin-top: 10px; font-size: 18px; font-style: italic; }
+    .contenedor-tabla { width: 100%; overflow-x: auto; margin-top: 20px; }
+    table { width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; white-space: nowrap; }
+    th { background-color: #004a7c; color: white; font-weight: bold; }
+    tbody tr:nth-child(even) { background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo Mario Dentals" class="logo-dental">
+  <h2>MARIO DENTALS</h2>
+  <p class="slogan">Clínica Dental Familiar</p>
+</header>
+
+<section>
+  <article>
+    <h1>Catálogo General de Pacientes</h1>
+    <hr>
+    <div class="contenedor-tabla">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Género</th>
+            <th>Alergias</th>
+            <th>Tipo Sangre</th>
+            <th>Aseguradora</th>
+            <th>Antecedentes</th>
+            <th>Tele. Meg.</th>
+            <th>Estatus</th>
+            <th>CURP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>P001</td><td>Juan Perez</td><td>26</td><td>masculino</td><td>Penicilina</td><td>O+</td><td>AXA</td><td>hipertension</td><td>555-9901</td><td>activo</td><td>PERJ020110HDF</td></tr>
+          <tr><td>P002</td><td>Maria Garcia</td><td>30</td><td>femenino</td><td>ninguna</td><td>A-</td><td>Netlife</td><td>hipertension</td><td>555-9902</td><td>activo</td><td>GARM960515MDF</td></tr>
+          <tr><td>P003</td><td>Luis Rodriguez</td><td>45</td><td>masculino</td><td>latex</td><td>O+</td><td>Particular</td><td>diabetes</td><td>555-9903</td><td>inactivo</td><td>ROGL810205HDF</td></tr>
+          <tr><td>P004</td><td>Ana Martinez</td><td>18</td><td>femenino</td><td>Polen</td><td>B+</td><td>GNP</td><td>asma</td><td>555-9904</td><td>activo</td><td>MARA071220MDF</td></tr>
+          <tr><td>P005</td><td>Sofia Hernandez</td><td>28</td><td>femenino</td><td>ninguna</td><td>A+</td><td>Particular</td><td>ninguno</td><td>555-9905</td><td>activo</td><td>HERS980801MDF</td></tr>
+          <tr><td>P006</td><td>Carlos Lopez</td><td>62</td><td>masculino</td><td>aspirina</td><td>O-</td><td>AXA</td><td>hipertension</td><td>555-9906</td><td>activo</td><td>LUPC640311HDF</td></tr>
+          <tr><td>P007</td><td>Diego Sanchez</td><td>35</td><td>masculino</td><td>aspirina</td><td>AB+</td><td>AXA</td><td>arritmia</td><td>555-9907</td><td>en Pausa</td><td>SAD910114HDF</td></tr>
+          <tr><td>P008</td><td>Elena Perez</td><td>50</td><td>femenino</td><td>Sulfa</td><td>O+</td><td>Netlife</td><td>ninguno</td><td>555-9908</td><td>activo</td><td>PERE760208HDF</td></tr>
+          <tr><td>P009</td><td>Lucia Torres</td><td>27</td><td>femenino</td><td>yodo</td><td>O+</td><td>GNP</td><td>ninguno</td><td>555-9909</td><td>activo</td><td>TORL990503MDF</td></tr>
+          <tr><td>P010</td><td>Roberto Diaz</td><td>23</td><td>masculino</td><td>ninguna</td><td>B-</td><td>Particular</td><td>asma</td><td>555-5510</td><td>activo</td><td>DIAR040212HDF</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+</section>
+
+</body>
+</html>

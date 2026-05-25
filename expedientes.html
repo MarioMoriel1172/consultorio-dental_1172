@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mario Dentals - Expedientes</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background-color: #f1f1f1; }
+    header { background-color: #004a7c; padding: 40px; text-align: center; color: white; border-bottom: 5px solid #000000; }
+    article { float: left; padding: 30px; width: 100%; background-color: #f1f1f1; min-height: 500px; }
+    .logo-dental { width: 150px; height: auto; border-radius: 10px; margin-bottom: 15px; background-color: white; padding: 10px; }
+    h2 { margin: 0; font-size: 40px; letter-spacing: 2px; }
+    .slogan { margin-top: 10px; font-size: 18px; font-style: italic; }
+    .contenedor-tabla { width: 100%; overflow-x: auto; margin-top: 20px; }
+    table { width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; white-space: nowrap; }
+    th { background-color: #004a7c; color: white; font-weight: bold; }
+    tbody tr:nth-child(even) { background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo Mario Dentals" class="logo-dental">
+  <h2>MARIO DENTALS</h2>
+  <p class="slogan">Clínica Dental Familiar</p>
+</header>
+
+<section>
+  <article>
+    <h1>Control Clínico de Expedientes</h1>
+    <hr>
+    <div class="contenedor-tabla">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre_Pa</th>
+            <th>Fecha_Vis</th>
+            <th>Motivo_Pri</th>
+            <th>Diagnóstico</th>
+            <th>Evolución</th>
+            <th>Receta_Medica</th>
+            <th>Plan_A_Seguir</th>
+            <th>Riesgos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>E001</td><td>Juan Perez</td><td>12/05/2026</td><td>Dolor en muela</td><td>caries en molar 36</td><td>inflamacion reducida</td><td>ibuprofeno 600mg</td><td>cita para limpieza</td><td>Alergia a Penicilina</td></tr>
+          <tr><td>E002</td><td>Maria Garcia</td><td>26/03/2026</td><td>sangrado de encias</td><td>gingivitis inicial</td><td>mejoria con enjuague</td><td>clorhexidina gel</td><td>limpieza profunda</td><td>Hipertension</td></tr>
+          <tr><td>E003</td><td>Luis Rodriguez</td><td>11/02/2026</td><td>protesis floja</td><td>desgaste de puente</td><td>se ajusto soporte</td><td>N/A</td><td>Nueva corona</td><td>Diabetes Tipo 2</td></tr>
+          <tr><td>E004</td><td>Ana Martinez</td><td>12/02/2026</td><td>Estetica dental</td><td>fractura de incisivo</td><td>resina aplicada</td><td>evitar solidos</td><td>Pulido final</td><td>Ninguno</td></tr>
+          <tr><td>E005</td><td>Carlos Lopez</td><td>15/01/2026</td><td>Control Brackets</td><td>apiñamiento leve</td><td>cambio de ligas</td><td>cera ortodontica</td><td>Ajuste mensual</td><td>Hipertension</td></tr>
+          <tr><td>E006</td><td>Sofia Hernandez</td><td>10/03/2026</td><td>sensibilidad frio</td><td>dentina expuesta</td><td>barniz aplicado</td><td>pasta Sensodyne</td><td>seguimiento</td><td>Alergia Sulfa</td></tr>
+          <tr><td>E007</td><td>Diego Sanchez</td><td>20/12/2025</td><td>revision anual</td><td>salud bucal buena</td><td>sin novedades</td><td>fluor preventivo</td><td>cita en 1 año</td><td>Asma</td></tr>
+          <tr><td>E008</td><td>Elena Perez</td><td>01/02/2026</td><td>Infeccion molar</td><td>absceso dental</td><td>drenaje realizado</td><td>amoxicilina 500mg</td><td>endodoncia</td><td>Ninguno</td></tr>
+          <tr><td>E009</td><td>Roberto Diaz</td><td>14/01/2026</td><td>dolor infantil</td><td>caries biberon</td><td>pulpotomia</td><td>paracetamol sol.</td><td>mantenedor</td><td>Ninguno</td></tr>
+          <tr><td>E010</td><td>Lucia Torres</td><td>20/05/2026</td><td>extraccion</td><td>muela del juicio</td><td>cirugia exitosa</td><td>ketorolaco 10mg</td><td>retirar puntos</td><td>Alergia yodo</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+</section>
+
+</body>
+</html>

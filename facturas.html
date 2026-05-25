@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mario Dentals - Facturas</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background-color: #f1f1f1; }
+    header { background-color: #004a7c; padding: 40px; text-align: center; color: white; border-bottom: 5px solid #000000; }
+    article { float: left; padding: 30px; width: 100%; background-color: #f1f1f1; min-height: 500px; }
+    .logo-dental { width: 150px; height: auto; border-radius: 10px; margin-bottom: 15px; background-color: white; padding: 10px; }
+    h2 { margin: 0; font-size: 40px; letter-spacing: 2px; }
+    .slogan { margin-top: 10px; font-size: 18px; font-style: italic; }
+    .contenedor-tabla { width: 100%; overflow-x: auto; margin-top: 20px; }
+    table { width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; white-space: nowrap; }
+    th { background-color: #004a7c; color: white; font-weight: bold; }
+    tbody tr:nth-child(even) { background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo Mario Dentals" class="logo-dental">
+  <h2>MARIO DENTALS</h2>
+  <p class="slogan">Clínica Dental Familiar</p>
+</header>
+
+<section>
+  <article>
+    <h1>Reporte General de Facturación (SAT)</h1>
+    <hr>
+    <div class="contenedor-tabla">
+      <table>
+        <thead>
+          <tr>
+            <th>ID Fact</th>
+            <th>Nombre_Cli</th>
+            <th>RFC</th>
+            <th>Concepto</th>
+            <th>Subtotal</th>
+            <th>IVA</th>
+            <th>Retenciones</th>
+            <th>Total_Fact</th>
+            <th>Ganancia</th>
+            <th>Estatus_Sa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>F001</td><td>Juan Perez</td><td>PERJ020110XY1</td><td>limpieza y resina</td><td>1724.14</td><td>308.91</td><td>0</td><td>2000</td><td>1724.14</td><td>vigente</td></tr>
+          <tr><td>F002</td><td>Maria Garcia</td><td>GARM960515A22</td><td>endodoncia molar</td><td>3879.31</td><td>620.69</td><td>0</td><td>4500</td><td>3879.31</td><td>vigente</td></tr>
+          <tr><td>F003</td><td>Carlos Lopez</td><td>LOC640311C44</td><td>extraccion simple</td><td>1293.1</td><td>206.9</td><td>0</td><td>1500</td><td>1293.1</td><td>vigente</td></tr>
+          <tr><td>F004</td><td>Sofia Hernandez</td><td>HES980801D55</td><td>blanqueamiento</td><td>3017.24</td><td>482.75</td><td>0</td><td>3500</td><td>3017.24</td><td>vigente</td></tr>
+          <tr><td>F005</td><td>Lucia Torres</td><td>TOL990303H99</td><td>corona porcelana</td><td>5172.41</td><td>827.59</td><td>0</td><td>6000</td><td>5172.41</td><td>vigente</td></tr>
+          <tr><td>F006</td><td>Diego Sanchez</td><td>SAD910114E66</td><td>mensualidad ortod.</td><td>2155.17</td><td>344.83</td><td>0</td><td>2500</td><td>2155.17</td><td>Cancelado</td></tr>
+          <tr><td>F007</td><td>Elena Perez</td><td>PEE760208F77</td><td>consulta gral</td><td>603.45</td><td>96.55</td><td>0</td><td>700</td><td>603.45</td><td>vigente</td></tr>
+          <tr><td>F008</td><td>Luis Rodriguez</td><td>ROL810205B33</td><td>protesis parcial</td><td>2046.81</td><td>1103.45</td><td>0</td><td>8000</td><td>6896.55</td><td>vigente</td></tr>
+          <tr><td>F009</td><td>Jorge Cano</td><td>CANJ700603H12</td><td>Trat. Periodoncia</td><td>2586.21</td><td>413.79</td><td>0</td><td>3000</td><td>2586.21</td><td>vigente</td></tr>
+          <tr><td>F010</td><td>Silvia Noe</td><td>NOES920925M99</td><td>implante titanio</td><td>12931.03</td><td>2068.97</td><td>0</td><td>15000</td><td>12931.03</td><td>En Proceso</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+</section>
+
+</body>
+</html>
