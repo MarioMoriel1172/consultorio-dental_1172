@@ -4,73 +4,18 @@
   <meta charset="UTF-8">
   <title>Mario Dentals - Doctores</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background-color: #f1f1f1;
-    }
-
-    header {
-      background-color: #004a7c; 
-      padding: 40px;
-      text-align: center;
-      color: white;
-      border-bottom: 5px solid #000000;
-    }
-
-    article {
-      float: left;
-      padding: 30px;
-      width: 100%;
-      background-color: #f1f1f1;
-      min-height: 500px; 
-    }
-
-    .logo-dental {
-      width: 150px; 
-      height: auto;
-      border-radius: 10px; 
-      margin-bottom: 15px;
-      background-color: white; 
-      padding: 10px;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 40px;
-      letter-spacing: 2px;
-    }
-
-    .slogan {
-      margin-top: 10px;
-      font-size: 18px;
-      font-style: italic;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background-color: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    th, td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-      font-size: 14px;
-    }
-
-    th {
-      background-color: #004a7c;
-      color: white;
-      font-weight: bold;
-    }
+    * { box-sizing: border-box; }
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background-color: #f1f1f1; }
+    header { background-color: #004a7c; padding: 40px; text-align: center; color: white; border-bottom: 5px solid #000000; }
+    article { float: left; padding: 30px; width: 100%; background-color: #f1f1f1; min-height: 500px; }
+    .logo-dental { width: 150px; height: auto; border-radius: 10px; margin-bottom: 15px; background-color: white; padding: 10px; }
+    h2 { margin: 0; font-size: 40px; letter-spacing: 2px; }
+    .slogan { margin-top: 10px; font-size: 18px; font-style: italic; }
+    .contenedor-tabla { width: 100%; overflow-x: auto; margin-top: 20px; }
+    table { width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; white-space: nowrap; }
+    th { background-color: #004a7c; color: white; font-weight: bold; }
+    tbody tr:nth-child(even) { background-color: #f9f9f9; }
   </style>
 </head>
 <body>
@@ -83,93 +28,40 @@
 
 <section>
   <article>
-    <h1>Nuestro Equipo Médico Especializado</h1>
+    <h1>Registro de Personal Médico (Doctores)</h1>
     <hr>
-    <p>Conozca a nuestros 10 profesionales de la salud dental, listos para atenderle con la mejor tecnología:</p>
-    
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nombre del Médico</th>
-          <th>Especialidad Médica</th>
-          <th>Cédula Profesional</th>
-          <th>Horario de Atención</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>01</td>
-          <td>Dr. Mario Gómez Pérez</td>
-          <td>Odontología General e Integral</td>
-          <td>CD-5847392</td>
-          <td>Lunes a Viernes (8:00 AM - 2:00 PM)</td>
-        </tr>
-        <tr>
-          <td>02</td>
-          <td>Dra. Laura Restrepo Silva</td>
-          <td>Ortodoncia Avanzada e Invisible</td>
-          <td>CD-9284711</td>
-          <td>Lunes, Miércoles y Viernes (3:00 PM - 8:00 PM)</td>
-        </tr>
-        <tr>
-          <td>03</td>
-          <td>Dr. Carlos Mendoza Castro</td>
-          <td>Endodoncia Microoscópica</td>
-          <td>CD-1029384</td>
-          <td>Martes y Jueves (2:00 PM - 7:00 PM)</td>
-        </tr>
-        <tr>
-          <td>04</td>
-          <td>Dra. Sofia Richter Martínez</td>
-          <td>Odontopediatría (Atención Infantil)</td>
-          <td>CD-4738291</td>
-          <td>Sábados de Clínica (9:00 AM - 3:00 PM)</td>
-        </tr>
-        <tr>
-          <td>05</td>
-          <td>Dr. Alejandro Silva Torres</td>
-          <td>Periodoncia e Implantes Dentales</td>
-          <td>CD-8374920</td>
-          <td>Lunes a Viernes (10:00 AM - 4:00 PM)</td>
-        </tr>
-        <tr>
-          <td>06</td>
-          <td>Dra. Elena Rostova Cortés</td>
-          <td>Cirugía Maxilofacial y Estética</td>
-          <td>CD-2938475</td>
-          <td>Solo Citas Programadas con Anticipación</td>
-        </tr>
-        <tr>
-          <td>07</td>
-          <td>Dr. Javier Benítez Ochoa</td>
-          <td>Rehabilitación y Prótesis Dental</td>
-          <td>CD-7483920</td>
-          <td>Lunes a Jueves (4:00 PM - 8:00 PM)</td>
-        </tr>
-        <tr>
-          <td>08</td>
-          <td>Dra. Carmen Esparza Ruiz</td>
-          <td>Estética Dental y Diseño de Sonrisa</td>
-          <td>CD-1928374</td>
-          <td>Viernes de Consulta (12:00 PM - 7:00 PM)</td>
-        </tr>
-        <tr>
-          <td>09</td>
-          <td>Dr. Ricardo Lugo Villalobos</td>
-          <td>Odontogeriatría (Adulto Mayor)</td>
-          <td>CD-3847291</td>
-          <td>Martes y Jueves (8:00 AM - 1:00 PM)</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>Dra. Mónica Salazar Flores</td>
-          <td>Patología y Diagnóstico Bucal</td>
-          <td>CD-8473921</td>
-          <td>Miércoles de Guardia (10:00 AM - 3:00 PM)</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="contenedor-tabla">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Teléfono</th>
+            <th>Dirección</th>
+            <th>Especialidad</th>
+            <th>Alergias</th>
+            <th>Correo</th>
+            <th>Sexo</th>
+            <th>Fecha Nac.</th>
+            <th>T.R. Sanguíneo</th>
+            <th>Consultorio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>D001</td><td>Dr. Ricardo Gomez</td><td>42</td><td>555-2001</td><td>Av. Reforma 12</td><td>Cirujano Maxilofacial</td><td>Ninguna</td><td>ricardo.g@mario.com</td><td>M</td><td>12/05/1983</td><td>O+</td><td>01</td></tr>
+          <tr><td>D002</td><td>Dra. Laura Ruiz</td><td>35</td><td>555-2002</td><td>Calle Luna 45</td><td>Endodoncista</td><td>Latex</td><td>laura.r@mario.com</td><td>F</td><td>22/08/1990</td><td>A+</td><td>02</td></tr>
+          <tr><td>D003</td><td>Dr. Samuel Rios</td><td>30</td><td>555-2003</td><td>Pino Suarez 8</td><td>odontopediatria</td><td>Penicilina</td><td>samuel.r@mario.com</td><td>M</td><td>05/11/1996</td><td>B+</td><td>03</td></tr>
+          <tr><td>D004</td><td>Dra. Elena Vega</td><td>38</td><td>555-2004</td><td>Av. Juarez 101</td><td>ortodoncista</td><td>Ninguna</td><td>elena.v@mario.com</td><td>F</td><td>30/01/1988</td><td>O-</td><td>02</td></tr>
+          <tr><td>D005</td><td>Dr. Hugo Mendez</td><td>50</td><td>555-2005</td><td>Morelos 234</td><td>Implantologia</td><td>Polvo</td><td>hugo.m@mario.com</td><td>M</td><td>15/03/1975</td><td>AB+</td><td>01</td></tr>
+          <tr><td>D006</td><td>Dra. Monica Paz</td><td>31</td><td>555-2006</td><td>Hidalgo 77</td><td>Estetica Dental</td><td>Ninguna</td><td>monica.p@mario.com</td><td>F</td><td>09/07/1994</td><td>O+</td><td>03</td></tr>
+          <tr><td>D007</td><td>Dr. Oscar Soto</td><td>45</td><td>555-2007</td><td>Durango 12</td><td>Patologia Bucal</td><td>Ninguna</td><td>oscar.s@mario.com</td><td>M</td><td>20/02/1981</td><td>A-</td><td>04</td></tr>
+          <tr><td>D008</td><td>Dra. Patricia Lo</td><td>27</td><td>555-2008</td><td>Veracruz 3</td><td>odontologia gral</td><td>Sulfa</td><td>paty.l@mario.com</td><td>F</td><td>11/12/1998</td><td>B-</td><td>04</td></tr>
+          <tr><td>D009</td><td>Dr. Jorge Cano</td><td>55</td><td>555-2004</td><td>Tepic 840</td><td>Periodoncista</td><td>Ninguna</td><td>jorge.c@mario.com</td><td>M</td><td>03/06/1970</td><td>O+</td><td>01</td></tr>
+          <tr><td>D010</td><td>Dra. Silvia Noe</td><td>34</td><td>555-2010</td><td>colima 57</td><td>Rehabilitacion</td><td>yodo</td><td>silvia.n@mario.com</td><td>F</td><td>25/09/1992</td><td>A+</td><td>02</td></tr>
+        </tbody>
+      </table>
+    </div>
   </article>
 </section>
 
