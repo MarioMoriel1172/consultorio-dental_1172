@@ -1,69 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mario Dentals - Doctores</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background-color: #f1f1f1; }
-    header { background-color: #004a7c; padding: 40px; text-align: center; color: white; border-bottom: 5px solid #000000; }
-    article { float: left; padding: 30px; width: 100%; background-color: #f1f1f1; min-height: 500px; }
-    .logo-dental { width: 150px; height: auto; border-radius: 10px; margin-bottom: 15px; background-color: white; padding: 10px; }
-    h2 { margin: 0; font-size: 40px; letter-spacing: 2px; }
-    .slogan { margin-top: 10px; font-size: 18px; font-style: italic; }
-    .contenedor-tabla { width: 100%; overflow-x: auto; margin-top: 20px; }
-    table { width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; white-space: nowrap; }
-    th { background-color: #004a7c; color: white; font-weight: bold; }
-    tbody tr:nth-child(even) { background-color: #f9f9f9; }
-  </style>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Jua:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Mario Dentals - Doctores</title>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Logo Mario Dentals" class="logo-dental">
-  <h2>MARIO DENTALS</h2>
-  <p class="slogan">Clínica Dental Familiar</p>
+    <h1>Personal Médico - Mario Dentals</h1>
+    <img width="250" align="center" src="logo.png">
+    <p>Panel de visualización y registro de los doctores de la clínica.</p>
 </header>
 
-<section>
-  <article>
-    <h1>Registro de Personal Médico (Doctores)</h1>
-    <hr>
+<main>
+    <h2>Doctores Registrados</h2>
     <div class="contenedor-tabla">
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Teléfono</th>
-            <th>Dirección</th>
-            <th>Especialidad</th>
-            <th>Alergias</th>
-            <th>Correo</th>
-            <th>Sexo</th>
-            <th>Fecha Nac.</th>
-            <th>T.R. Sanguíneo</th>
-            <th>Consultorio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>D001</td><td>Dr. Ricardo Gomez</td><td>42</td><td>555-2001</td><td>Av. Reforma 12</td><td>Cirujano Maxilofacial</td><td>Ninguna</td><td>ricardo.g@mario.com</td><td>M</td><td>12/05/1983</td><td>O+</td><td>01</td></tr>
-          <tr><td>D002</td><td>Dra. Laura Ruiz</td><td>35</td><td>555-2002</td><td>Calle Luna 45</td><td>Endodoncista</td><td>Latex</td><td>laura.r@mario.com</td><td>F</td><td>22/08/1990</td><td>A+</td><td>02</td></tr>
-          <tr><td>D003</td><td>Dr. Samuel Rios</td><td>30</td><td>555-2003</td><td>Pino Suarez 8</td><td>odontopediatria</td><td>Penicilina</td><td>samuel.r@mario.com</td><td>M</td><td>05/11/1996</td><td>B+</td><td>03</td></tr>
-          <tr><td>D004</td><td>Dra. Elena Vega</td><td>38</td><td>555-2004</td><td>Av. Juarez 101</td><td>ortodoncista</td><td>Ninguna</td><td>elena.v@mario.com</td><td>F</td><td>30/01/1988</td><td>O-</td><td>02</td></tr>
-          <tr><td>D005</td><td>Dr. Hugo Mendez</td><td>50</td><td>555-2005</td><td>Morelos 234</td><td>Implantologia</td><td>Polvo</td><td>hugo.m@mario.com</td><td>M</td><td>15/03/1975</td><td>AB+</td><td>01</td></tr>
-          <tr><td>D006</td><td>Dra. Monica Paz</td><td>31</td><td>555-2006</td><td>Hidalgo 77</td><td>Estetica Dental</td><td>Ninguna</td><td>monica.p@mario.com</td><td>F</td><td>09/07/1994</td><td>O+</td><td>03</td></tr>
-          <tr><td>D007</td><td>Dr. Oscar Soto</td><td>45</td><td>555-2007</td><td>Durango 12</td><td>Patologia Bucal</td><td>Ninguna</td><td>oscar.s@mario.com</td><td>M</td><td>20/02/1981</td><td>A-</td><td>04</td></tr>
-          <tr><td>D008</td><td>Dra. Patricia Lo</td><td>27</td><td>555-2008</td><td>Veracruz 3</td><td>odontologia gral</td><td>Sulfa</td><td>paty.l@mario.com</td><td>F</td><td>11/12/1998</td><td>B-</td><td>04</td></tr>
-          <tr><td>D009</td><td>Dr. Jorge Cano</td><td>55</td><td>555-2004</td><td>Tepic 840</td><td>Periodoncista</td><td>Ninguna</td><td>jorge.c@mario.com</td><td>M</td><td>03/06/1970</td><td>O+</td><td>01</td></tr>
-          <tr><td>D010</td><td>Dra. Silvia Noe</td><td>34</td><td>555-2010</td><td>colima 57</td><td>Rehabilitacion</td><td>yodo</td><td>silvia.n@mario.com</td><td>F</td><td>25/09/1992</td><td>A+</td><td>02</td></tr>
-        </tbody>
-      </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Especialidad</th>
+                    <th>Alergias</th>
+                    <th>Correo</th>
+                    <th>Sexo</th>
+                    <th>Fecha Nac.</th>
+                    <th>T.R. Sanguíneo</th>
+                    <th>Consultorio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>D001</td><td>Dr. Ricardo Gomez</td><td>42</td><td>555-2001</td><td>Av. Reforma 12</td><td>Cirujano Maxilofacial</td><td>Ninguna</td><td>ricardo.g@mario.com</td><td>M</td><td>12/05/1983</td><td>O+</td><td>01</td></tr>
+                <tr><td>D002</td><td>Dra. Laura Ruiz</td><td>35</td><td>555-2002</td><td>Calle Luna 45</td><td>Endodoncista</td><td>Latex</td><td>laura.r@mario.com</td><td>F</td><td>22/08/1990</td><td>A+</td><td>02</td></tr>
+                <tr><td>D003</td><td>Dr. Samuel Rios</td><td>30</td><td>555-2003</td><td>Pino Suarez 8</td><td>odontopediatria</td><td>Penicilina</td><td>samuel.r@mario.com</td><td>M</td><td>05/11/1996</td><td>B+</td><td>03</td></tr>
+                <tr><td>D004</td><td>Dra. Elena Vega</td><td>38</td><td>555-2004</td><td>Av. Juarez 101</td><td>ortodoncista</td><td>Ninguna</td><td>elena.v@mario.com</td><td>F</td><td>30/01/1988</td><td>O-</td><td>02</td></tr>
+                <tr><td>D005</td><td>Dr. Hugo Mendez</td><td>50</td><td>555-2005</td><td>Morelos 234</td><td>Implantologia</td><td>Polvo</td><td>hugo.m@mario.com</td><td>M</td><td>15/03/1975</td><td>AB+</td><td>01</td></tr>
+                <tr><td>D006</td><td>Dra. Monica Paz</td><td>31</td><td>555-2006</td><td>Hidalgo 77</td><td>Estetica Dental</td><td>Ninguna</td><td>monica.p@mario.com</td><td>F</td><td>09/07/1994</td><td>O+</td><td>03</td></tr>
+                <tr><td>D007</td><td>Dr. Oscar Soto</td><td>45</td><td>555-2007</td><td>Durango 12</td><td>Patologia Bucal</td><td>Ninguna</td><td>oscar.s@mario.com</td><td>M</td><td>20/02/1981</td><td>A-</td><td>04</td></tr>
+                <tr><td>D008</td><td>Dra. Patricia Lo</td><td>27</td><td>555-2008</td><td>Veracruz 3</td><td>odontologia gral</td><td>Sulfa</td><td>paty.l@mario.com</td><td>F</td><td>11/12/1998</td><td>B-</td><td>04</td></tr>
+                <tr><td>D009</td><td>Dr. Jorge Cano</td><td>55</td><td>555-2004</td><td>Tepic 840</td><td>Periodoncista</td><td>Ninguna</td><td>jorge.c@mario.com</td><td>M</td><td>03/06/1970</td><td>O+</td><td>01</td></tr>
+                <tr><td>D010</td><td>Dra. Silvia Noe</td><td>34</td><td>555-2010</td><td>colima 57</td><td>Rehabilitacion</td><td>yodo</td><td>silvia.n@mario.com</td><td>F</td><td>25/09/1992</td><td>A+</td><td>02</td></tr>
+            </tbody>
+        </table>
     </div>
-  </article>
-</section>
+
+    <div class="form-container">
+        <h3>Alta de Nuevo Doctor</h3>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label>ID del doctor:</label>
+                <input type="text" placeholder="Ej: D011" required>
+            </div>
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" placeholder="Ej: Dr. Francisco Mora" required>
+            </div>
+            <div class="form-group">
+                <label>Edad:</label>
+                <input type="number" placeholder="Ej: 40" required>
+            </div>
+            <div class="form-group">
+                <label>Teléfono:</label>
+                <input type="text" placeholder="Ej: 555-2011" required>
+            </div>
+            <div class="form-group">
+                <label>Dirección:</label>
+                <input type="text" placeholder="Ej: Av. Universidad 45" required>
+            </div>
+            <div class="form-group">
+                <label>Especialidad:</label>
+                <input type="text" placeholder="Ej: Endodoncista" required>
+            </div>
+            <div class="form-group">
+                <label>Alergias:</label>
+                <input type="text" placeholder="Ej: Ninguna" required>
+            </div>
+            <div class="form-group">
+                <label>Correo:</label>
+                <input type="text" placeholder="Ej: francisco.m@mario.com" required>
+            </div>
+            <div class="form-group">
+                <label>Sexo:</label>
+                <input type="text" placeholder="Ej: M o F" required>
+            </div>
+            <div class="form-group">
+                <label>Fecha de Nacimiento:</label>
+                <input type="date" required>
+            </div>
+            <div class="form-group">
+                <label>Tipo de Sangre:</label>
+                <input type="text" placeholder="Ej: O+" required>
+            </div>
+            <div class="form-group">
+                <label>Consultorio:</label>
+                <input type="text" placeholder="Ej: 02" required>
+            </div>
+            <button type="submit" class="btn-submit">Dar de alta al Doctor</button>
+        </form>
+    </div>
+
+    <a href="index.html" class="btn-back">Volver al Inicio</a>
+</main>
+
+<footer>
+    <p>Moriel Gonzalez Mario Alberto - Programación</p>
+    <p>24308051281172 - 4-I</p>
+</footer>
 
 </body>
+<style>
+    * { box-sizing: border-box; }
+    body { font-family: "Poppins", sans-serif; background-color: #fcf8fb; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+    header { background-color: rgb(245, 220, 229); width: 100%; padding: 20px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    h1 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0; font-size: 2rem; }
+    h2 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin-top: 10px; }
+    h3 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0 0 20px 0; font-size: 1.5rem; text-align: center; }
+    main { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 40px 20px; flex: 1; }
+    
+    .contenedor-tabla { width: 100%; max-width: 1100px; overflow-x: auto; margin-bottom: 40px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    table { width: 100%; border-collapse: collapse; min-width: 800px; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; font-size: 14px; }
+    th { background-color: #ca9ec3; color: white; font-weight: 600; }
+    tr:nth-child(even) { background-color: #faf7fa; }
+  
+    .form-container { max-width: 500px; width: 100%; background: white; padding: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(245, 228, 242, 0.7); border-top: 6px solid #e8c5e3; }
+    .form-group { margin-bottom: 22px; }
+    label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; font-size: 14px; }
+    input[type="text"], input[type="number"], input[type="date"] { width: 100%; padding: 12px; border: 1px solid #e0d0dd; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 14px; background-color: #faf7fa; color: #333; transition: all 0.3s ease; }
+    input:focus { outline: none; border-color: #ca9ec3; background-color: #fff; box-shadow: 0 0 5px rgba(202, 158, 195, 0.4); }
+    .btn-submit { background-color: #ca9ec3; color: white; border: none; padding: 14px 15px; width: 100%; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; font-family: "Poppins", sans-serif; margin-top: 10px; }
+    .btn-submit:hover { background-color: #b382ab; }
+    .btn-back { display: inline-block; text-align: center; margin-top: 25px; color: #888; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s ease; }
+    .btn-back:hover { color: #b382ab; }
+    
+    footer { width: 100%; background-color: #f3edf2; padding: 15px 0; text-align: center; font-size: 13px; color: #776a78; margin-top: 40px; }
+    footer p { margin: 4px 0; font-family: 'Poppins', sans-serif; }
+</style>
 </html>
