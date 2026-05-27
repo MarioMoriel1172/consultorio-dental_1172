@@ -1,69 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mario Dentals - Consultorios</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background-color: #f1f1f1; }
-    header { background-color: #004a7c; padding: 40px; text-align: center; color: white; border-bottom: 5px solid #000000; }
-    article { float: left; padding: 30px; width: 100%; background-color: #f1f1f1; min-height: 500px; }
-    .logo-dental { width: 150px; height: auto; border-radius: 10px; margin-bottom: 15px; background-color: white; padding: 10px; }
-    h2 { margin: 0; font-size: 40px; letter-spacing: 2px; }
-    .slogan { margin-top: 10px; font-size: 18px; font-style: italic; }
-    .contenedor-tabla { width: 100%; overflow-x: auto; margin-top: 20px; }
-    table { width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; white-space: nowrap; }
-    th { background-color: #004a7c; color: white; font-weight: bold; }
-    tbody tr:nth-child(even) { background-color: #f9f9f9; }
-  </style>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Jua:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Mario Dentals - Consultorios</title>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Logo Mario Dentals" class="logo-dental">
-  <h2>MARIO DENTALS</h2>
-  <p class="slogan">Clínica Dental Familiar</p>
+    <h1>Infraestructura - Mario Dentals</h1>
+    <img width="250" align="center" src="logo.png">
+    <p>Panel de visualización y alta de consultorios físicos.</p>
 </header>
 
-<section>
-  <article>
-    <h1>Control de Infraestructura (Consultorios)</h1>
-    <hr>
+<main>
+    <h2>Consultorios de la Clínica</h2>
     <div class="contenedor-tabla">
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Sala</th>
-            <th>Piso</th>
-            <th>Silla</th>
-            <th>Rayos_X</th>
-            <th>Monitor</th>
-            <th>Esterilizador</th>
-            <th>Cámara</th>
-            <th>Mantenimiento</th>
-            <th>Estatus</th>
-            <th>Especialidad</th>
-            <th>Metros</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>C001</td><td>Sala oro</td><td>4</td><td>Hidraulica Pro</td><td>Digital 3D</td><td>32" 4K</td><td>Si</td><td>Si</td><td>10/01/26</td><td>operativo</td><td>Cirugia</td><td>20</td></tr>
-          <tr><td>C002</td><td>Sala plata</td><td>1</td><td>Electrica Est.</td><td>Periapical</td><td>24" HD</td><td>Si</td><td>No</td><td>15/01/26</td><td>operativo</td><td>General</td><td>15</td></tr>
-          <tr><td>C003</td><td>Kids Zone</td><td>1</td><td>Dino-Pediatrica</td><td>No</td><td>40" TV</td><td>No</td><td>Si</td><td>01/02/26</td><td>operativo</td><td>odontoped.</td><td>18</td></tr>
-          <tr><td>C004</td><td>Endodoncia</td><td>2</td><td>Ergonomica Pro</td><td>Portatil</td><td>27" HD</td><td>Si</td><td>Si</td><td>20/12/25</td><td>Mantenim.</td><td>Endodoncia</td><td>14</td></tr>
-          <tr><td>C005</td><td>ortodoncia A</td><td>2</td><td>Basica</td><td>No</td><td>24" HD</td><td>No</td><td>No</td><td>12/01/26</td><td>operativo</td><td>ortodoncia</td><td>12</td></tr>
-          <tr><td>C006</td><td>ortodoncia B</td><td>2</td><td>Basica</td><td>No</td><td>24" HD</td><td>No</td><td>No</td><td>12/01/26</td><td>operativo</td><td>ortodoncia</td><td>12</td></tr>
-          <tr><td>C007</td><td>Lab Dental</td><td>1</td><td>Mesa Trabajo</td><td>No</td><td>N/A</td><td>industrial</td><td>No</td><td>05/02/26</td><td>operativo</td><td>Protesis</td><td>25</td></tr>
-          <tr><td>C008</td><td>Sala VIP</td><td>3</td><td>Masaje Integr.</td><td>Panoramico</td><td>50" 4K</td><td>Si</td><td>Si</td><td>14/02/26</td><td>operativo</td><td>Estetica</td><td>32</td></tr>
-          <tr><td>C009</td><td>Rayos X</td><td>1</td><td>N/A</td><td>Tomografo</td><td>tactil</td><td>No</td><td>No</td><td>10/11/25</td><td>operativo</td><td>Diagnostico</td><td>10</td></tr>
-          <tr><td>C010</td><td>Emergencias</td><td>1</td><td>Quirurgica</td><td>Digital</td><td>27" HD</td><td>Si</td><td>Si</td><td>02/02/26</td><td>Limpieza</td><td>Urgencias</td><td>24</td></tr>
-        </tbody>
-      </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Sala</th>
+                    <th>Piso</th>
+                    <th>Silla</th>
+                    <th>Rayos_X</th>
+                    <th>Monitor</th>
+                    <th>Esterilizador</th>
+                    <th>Cámara</th>
+                    <th>Mantenimiento</th>
+                    <th>Estatus</th>
+                    <th>Especialidad</th>
+                    <th>Metros</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>C001</td><td>Sala oro</td><td>4</td><td>Hidraulica Pro</td><td>Digital 3D</td><td>32" 4K</td><td>Si</td><td>Si</td><td>10/01/26</td><td>operativo</td><td>Cirugia</td><td>20</td></tr>
+                <tr><td>C002</td><td>Sala plata</td><td>1</td><td>Electrica Est.</td><td>Periapical</td><td>24" HD</td><td>Si</td><td>No</td><td>15/01/26</td><td>operativo</td><td>General</td><td>15</td></tr>
+                <tr><td>C003</td><td>Kids Zone</td><td>1</td><td>Dino-Pediatrica</td><td>No</td><td>40" TV</td><td>No</td><td>Si</td><td>01/02/26</td><td>operativo</td><td>odontoped.</td><td>18</td></tr>
+                <tr><td>C004</td><td>Endodoncia</td><td>2</td><td>Ergonomica Pro</td><td>Portatil</td><td>27" HD</td><td>Si</td><td>Si</td><td>20/12/25</td><td>Mantenim.</td><td>Endodoncia</td><td>14</td></tr>
+                <tr><td>C005</td><td>ortodoncia A</td><td>2</td><td>Basica</td><td>No</td><td>24" HD</td><td>No</td><td>No</td><td>12/01/26</td><td>operativo</td><td>ortodoncia</td><td>12</td></tr>
+                <tr><td>C006</td><td>ortodoncia B</td><td>2</td><td>Basica</td><td>No</td><td>24" HD</td><td>No</td><td>No</td><td>12/01/26</td><td>operativo</td><td>ortodoncia</td><td>12</td></tr>
+                <tr><td>C007</td><td>Lab Dental</td><td>1</td><td>Mesa Trabajo</td><td>No</td><td>N/A</td><td>industrial</td><td>No</td><td>05/02/26</td><td>operativo</td><td>Protesis</td><td>25</td></tr>
+                <tr><td>C008</td><td>Sala VIP</td><td>3</td><td>Masaje Integr.</td><td>Panoramico</td><td>50" 4K</td><td>Si</td><td>Si</td><td>14/02/26</td><td>operativo</td><td>Estetica</td><td>32</td></tr>
+                <tr><td>C009</td><td>Rayos X</td><td>1</td><td>N/A</td><td>Tomografo</td><td>tactil</td><td>No</td><td>No</td><td>10/11/25</td><td>operativo</td><td>Diagnostico</td><td>10</td></tr>
+                <tr><td>C010</td><td>Emergencias</td><td>1</td><td>Quirurgica</td><td>Digital</td><td>27" HD</td><td>Si</td><td>Si</td><td>02/02/26</td><td>Limpieza</td><td>Urgencias</td><td>24</td></tr>
+            </tbody>
+        </table>
     </div>
-  </article>
-</section>
+
+    <div class="form-container">
+        <h3>Alta de Nuevo Consultorio</h3>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label>ID Consultorio:</label>
+                <input type="text" placeholder="Ej: C011" required>
+            </div>
+            <div class="form-group">
+                <label>Sala:</label>
+                <input type="text" placeholder="Ej: Sala Bronce" required>
+            </div>
+            <div class="form-group">
+                <label>Piso:</label>
+                <input type="number" placeholder="Ej: 1" required>
+            </div>
+            <div class="form-group">
+                <label>Silla:</label>
+                <input type="text" placeholder="Ej: Neumática Estándar" required>
+            </div>
+            <div class="form-group">
+                <label>Rayos X:</label>
+                <input type="text" placeholder="Ej: Portátil / No" required>
+            </div>
+            <div class="form-group">
+                <label>Monitor:</label>
+                <input type="text" placeholder="Ej: 24 pulgadas" required>
+            </div>
+            <div class="form-group">
+                <label>Esterilizador:</label>
+                <input type="text" placeholder="Ej: Si / No" required>
+            </div>
+            <div class="form-group">
+                <label>Cámara:</label>
+                <input type="text" placeholder="Ej: Si / No" required>
+            </div>
+            <div class="form-group">
+                <label>Mantenimiento:</label>
+                <input type="text" placeholder="Ej: 18/02/26" required>
+            </div>
+            <div class="form-group">
+                <label>Estatus:</label>
+                <input type="text" placeholder="Ej: operativo" required>
+            </div>
+            <div class="form-group">
+                <label>Especialidad:</label>
+                <input type="text" placeholder="Ej: General" required>
+            </div>
+            <div class="form-group">
+                <label>Metros:</label>
+                <input type="number" placeholder="Ej: 15" required>
+            </div>
+            <button type="submit" class="btn-submit">Registrar Consultorio</button>
+        </form>
+    </div>
+
+    <a href="index.html" class="btn-back">Volver al Inicio</a>
+</main>
+
+<footer>
+    <p>Moriel Gonzalez Mario Alberto - Programación</p>
+    <p>24308051281172 - 4-I</p>
+</footer>
 
 </body>
+<style>
+    * { box-sizing: border-box; }
+    body { font-family: "Poppins", sans-serif; background-color: #fcf8fb; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+    header { background-color: rgb(245, 220, 229); width: 100%; padding: 20px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    h1 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0; font-size: 2rem; }
+    h2 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin-top: 10px; }
+    h3 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0 0 20px 0; font-size: 1.5rem; text-align: center; }
+    main { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 40px 20px; flex: 1; }
+    
+    .contenedor-tabla { width: 100%; max-width: 1100px; overflow-x: auto; margin-bottom: 40px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    table { width: 100%; border-collapse: collapse; min-width: 800px; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; font-size: 14px; }
+    th { background-color: #ca9ec3; color: white; font-weight: 600; }
+    tr:nth-child(even) { background-color: #faf7fa; }
+
+    .form-container { max-width: 500px; width: 100%; background: white; padding: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(245, 228, 242, 0.7); border-top: 6px solid #e8c5e3; }
+    .form-group { margin-bottom: 22px; }
+    label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; font-size: 14px; }
+    input[type="text"], input[type="number"], input[type="date"] { width: 100%; padding: 12px; border: 1px solid #e0d0dd; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 14px; background-color: #faf7fa; color: #333; transition: all 0.3s ease; }
+    input:focus { outline: none; border-color: #ca9ec3; background-color: #fff; box-shadow: 0 0 5px rgba(202, 158, 195, 0.4); }
+    .btn-submit { background-color: #ca9ec3; color: white; border: none; padding: 14px 15px; width: 100%; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; font-family: "Poppins", sans-serif; margin-top: 10px; }
+    .btn-submit:hover { background-color: #b382ab; }
+    .btn-back { display: inline-block; text-align: center; margin-top: 25px; color: #888; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s ease; }
+    .btn-back:hover { color: #b382ab; }
+    
+    footer { width: 100%; background-color: #f3edf2; padding: 15px 0; text-align: center; font-size: 13px; color: #776a78; margin-top: 40px; }
+    footer p { margin: 4px 0; font-family: 'Poppins', sans-serif; }
+</style>
 </html>
