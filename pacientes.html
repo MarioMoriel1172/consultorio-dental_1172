@@ -1,68 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mario Dentals - Pacientes</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background-color: #f1f1f1; }
-    header { background-color: #004a7c; padding: 40px; text-align: center; color: white; border-bottom: 5px solid #000000; }
-    article { float: left; padding: 30px; width: 100%; background-color: #f1f1f1; min-height: 500px; }
-    .logo-dental { width: 150px; height: auto; border-radius: 10px; margin-bottom: 15px; background-color: white; padding: 10px; }
-    h2 { margin: 0; font-size: 40px; letter-spacing: 2px; }
-    .slogan { margin-top: 10px; font-size: 18px; font-style: italic; }
-    .contenedor-tabla { width: 100%; overflow-x: auto; margin-top: 20px; }
-    table { width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; white-space: nowrap; }
-    th { background-color: #004a7c; color: white; font-weight: bold; }
-    tbody tr:nth-child(even) { background-color: #f9f9f9; }
-  </style>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Jua:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Mario Dentals - Pacientes</title>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Logo Mario Dentals" class="logo-dental">
-  <h2>MARIO DENTALS</h2>
-  <p class="slogan">Clínica Dental Familiar</p>
+    <h1>Catálogo de Pacientes - Mario Dentals</h1>
+    <img width="250" align="center" src="logo.png">
+    <p>Panel de visualización y altas para pacientes de la clínica.</p>
 </header>
 
-<section>
-  <article>
-    <h1>Catálogo General de Pacientes</h1>
-    <hr>
+<main>
+    <h2>Pacientes Activos</h2>
     <div class="contenedor-tabla">
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Género</th>
-            <th>Alergias</th>
-            <th>Tipo Sangre</th>
-            <th>Aseguradora</th>
-            <th>Antecedentes</th>
-            <th>Tele. Meg.</th>
-            <th>Estatus</th>
-            <th>CURP</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>P001</td><td>Juan Perez</td><td>26</td><td>masculino</td><td>Penicilina</td><td>O+</td><td>AXA</td><td>hipertension</td><td>555-9901</td><td>activo</td><td>PERJ020110HDF</td></tr>
-          <tr><td>P002</td><td>Maria Garcia</td><td>30</td><td>femenino</td><td>ninguna</td><td>A-</td><td>Netlife</td><td>hipertension</td><td>555-9902</td><td>activo</td><td>GARM960515MDF</td></tr>
-          <tr><td>P003</td><td>Luis Rodriguez</td><td>45</td><td>masculino</td><td>latex</td><td>O+</td><td>Particular</td><td>diabetes</td><td>555-9903</td><td>inactivo</td><td>ROGL810205HDF</td></tr>
-          <tr><td>P004</td><td>Ana Martinez</td><td>18</td><td>femenino</td><td>Polen</td><td>B+</td><td>GNP</td><td>asma</td><td>555-9904</td><td>activo</td><td>MARA071220MDF</td></tr>
-          <tr><td>P005</td><td>Sofia Hernandez</td><td>28</td><td>femenino</td><td>ninguna</td><td>A+</td><td>Particular</td><td>ninguno</td><td>555-9905</td><td>activo</td><td>HERS980801MDF</td></tr>
-          <tr><td>P006</td><td>Carlos Lopez</td><td>62</td><td>masculino</td><td>aspirina</td><td>O-</td><td>AXA</td><td>hipertension</td><td>555-9906</td><td>activo</td><td>LUPC640311HDF</td></tr>
-          <tr><td>P007</td><td>Diego Sanchez</td><td>35</td><td>masculino</td><td>aspirina</td><td>AB+</td><td>AXA</td><td>arritmia</td><td>555-9907</td><td>en Pausa</td><td>SAD910114HDF</td></tr>
-          <tr><td>P008</td><td>Elena Perez</td><td>50</td><td>femenino</td><td>Sulfa</td><td>O+</td><td>Netlife</td><td>ninguno</td><td>555-9908</td><td>activo</td><td>PERE760208HDF</td></tr>
-          <tr><td>P009</td><td>Lucia Torres</td><td>27</td><td>femenino</td><td>yodo</td><td>O+</td><td>GNP</td><td>ninguno</td><td>555-9909</td><td>activo</td><td>TORL990503MDF</td></tr>
-          <tr><td>P010</td><td>Roberto Diaz</td><td>23</td><td>masculino</td><td>ninguna</td><td>B-</td><td>Particular</td><td>asma</td><td>555-5510</td><td>activo</td><td>DIAR040212HDF</td></tr>
-        </tbody>
-      </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Género</th>
+                    <th>Alergias</th>
+                    <th>Tipo Sangre</th>
+                    <th>Aseguradora</th>
+                    <th>Antecedentes</th>
+                    <th>Tele. Meg.</th>
+                    <th>Estatus</th>
+                    <th>CURP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>P001</td><td>Juan Perez</td><td>26</td><td>masculino</td><td>Penicilina</td><td>O+</td><td>AXA</td><td>hipertension</td><td>555-9901</td><td>activo</td><td>PERJ020110HDF</td></tr>
+                <tr><td>P002</td><td>Maria Garcia</td><td>30</td><td>femenino</td><td>ninguna</td><td>A-</td><td>Netlife</td><td>hipertension</td><td>555-9902</td><td>activo</td><td>GARM960515MDF</td></tr>
+                <tr><td>P003</td><td>Luis Rodriguez</td><td>45</td><td>masculino</td><td>latex</td><td>O+</td><td>Particular</td><td>diabetes</td><td>555-9903</td><td>inactivo</td><td>ROGL810205HDF</td></tr>
+                <tr><td>P004</td><td>Ana Martinez</td><td>18</td><td>femenino</td><td>Polen</td><td>B+</td><td>GNP</td><td>asma</td><td>555-9904</td><td>activo</td><td>MARA071220MDF</td></tr>
+                <tr><td>P005</td><td>Sofia Hernandez</td><td>28</td><td>femenino</td><td>A+</td><td>Particular</td><td>ninguno</td><td>555-9905</td><td>activo</td><td>A+</td><td>HERS980801MDF</td></tr>
+                <tr><td>P006</td><td>Carlos Lopez</td><td>62</td><td>masculino</td><td>aspirina</td><td>O-</td><td>AXA</td><td>hipertension</td><td>555-9906</td><td>activo</td><td>LUPC640311HDF</td></tr>
+                <tr><td>P007</td><td>Diego Sanchez</td><td>35</td><td>masculino</td><td>aspirina</td><td>AB+</td><td>AXA</td><td>arritmia</td><td>555-9907</td><td>en Pausa</td><td>SAD910114HDF</td></tr>
+                <tr><td>P008</td><td>Elena Perez</td><td>50</td><td>femenino</td><td>Sulfa</td><td>O+</td><td>Netlife</td><td>ninguno</td><td>555-9908</td><td>activo</td><td>PERE760208HDF</td></tr>
+                <tr><td>P009</td><td>Lucia Torres</td><td>27</td><td>femenino</td><td>yodo</td><td>O+</td><td>GNP</td><td>ninguno</td><td>555-9909</td><td>activo</td><td>TORL990503MDF</td></tr>
+                <tr><td>P010</td><td>Roberto Diaz</td><td>23</td><td>masculino</td><td>ninguna</td><td>B-</td><td>Particular</td><td>asma</td><td>555-5510</td><td>activo</td><td>DIAR040212HDF</td></tr>
+            </tbody>
+        </table>
     </div>
-  </article>
-</section>
+
+    <div class="form-container">
+        <h3>Alta de Nuevo Paciente</h3>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label>ID Paciente:</label>
+                <input type="text" placeholder="Ej: P011" required>
+            </div>
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" placeholder="Ej: Alan Torres" required>
+            </div>
+            <div class="form-group">
+                <label>Edad:</label>
+                <input type="number" placeholder="Ej: 29" required>
+            </div>
+            <div class="form-group">
+                <label>Género:</label>
+                <input type="text" placeholder="Ej: masculino / femenino" required>
+            </div>
+            <div class="form-group">
+                <label>Alergias:</label>
+                <input type="text" placeholder="Ej: ninguna" required>
+            </div>
+            <div class="form-group">
+                <label>Tipo de Sangre:</label>
+                <input type="text" placeholder="Ej: A+" required>
+            </div>
+            <div class="form-group">
+                <label>Aseguradora:</label>
+                <input type="text" placeholder="Ej: GNP / Particular" required>
+            </div>
+            <div class="form-group">
+                <label>Antecedentes:</label>
+                <input type="text" placeholder="Ej: ninguno" required>
+            </div>
+            <div class="form-group">
+                <label>Tel. Emergencia:</label>
+                <input type="text" placeholder="Ej: 555-9911" required>
+            </div>
+            <div class="form-group">
+                <label>Estatus:</label>
+                <input type="text" placeholder="Ej: activo" required>
+            </div>
+            <div class="form-group">
+                <label>CURP:</label>
+                <input type="text" placeholder="18 caracteres" required>
+            </div>
+            <button type="submit" class="btn-submit">Dar de alta al Paciente</button>
+        </form>
+    </div>
+
+    <a href="index.html" class="btn-back">Volver al Inicio</a>
+</main>
+
+<footer>
+    <p>Moriel Gonzalez Mario Alberto - Programación</p>
+    <p>24308051281172 - 4-I</p>
+</footer>
 
 </body>
+<style>
+    * { box-sizing: border-box; }
+    body { font-family: "Poppins", sans-serif; background-color: #fcf8fb; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+    header { background-color: rgb(245, 220, 229); width: 100%; padding: 20px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    h1 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0; font-size: 2rem; }
+    h2 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin-top: 10px; }
+    h3 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0 0 20px 0; font-size: 1.5rem; text-align: center; }
+    main { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 40px 20px; flex: 1; }
+    
+    .contenedor-tabla { width: 100%; max-width: 1100px; overflow-x: auto; margin-bottom: 40px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    table { width: 100%; border-collapse: collapse; min-width: 800px; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; font-size: 14px; }
+    th { background-color: #ca9ec3; color: white; font-weight: 600; }
+    tr:nth-child(even) { background-color: #faf7fa; }
+
+    .form-container { max-width: 500px; width: 100%; background: white; padding: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(245, 228, 242, 0.7); border-top: 6px solid #e8c5e3; }
+    .form-group { margin-bottom: 22px; }
+    label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; font-size: 14px; }
+    input[type="text"], input[type="number"], input[type="date"] { width: 100%; padding: 12px; border: 1px solid #e0d0dd; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 14px; background-color: #faf7fa; color: #333; transition: all 0.3s ease; }
+    input:focus { outline: none; border-color: #ca9ec3; background-color: #fff; box-shadow: 0 0 5px rgba(202, 158, 195, 0.4); }
+    .btn-submit { background-color: #ca9ec3; color: white; border: none; padding: 14px 15px; width: 100%; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; font-family: "Poppins", sans-serif; margin-top: 10px; }
+    .btn-submit:hover { background-color: #b382ab; }
+    .btn-back { display: inline-block; text-align: center; margin-top: 25px; color: #888; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s ease; }
+    .btn-back:hover { color: #b382ab; }
+    
+    footer { width: 100%; background-color: #f3edf2; padding: 15px 0; text-align: center; font-size: 13px; color: #776a78; margin-top: 40px; }
+    footer p { margin: 4px 0; font-family: 'Poppins', sans-serif; }
+</style>
 </html>
