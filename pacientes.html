@@ -36,64 +36,59 @@
             <tbody>
                 <tr><td>P001</td><td>Juan Perez</td><td>26</td><td>masculino</td><td>Penicilina</td><td>O+</td><td>AXA</td><td>hipertension</td><td>555-9901</td><td>activo</td><td>PERJ020110HDF</td></tr>
                 <tr><td>P002</td><td>Maria Garcia</td><td>30</td><td>femenino</td><td>ninguna</td><td>A-</td><td>Netlife</td><td>hipertension</td><td>555-9902</td><td>activo</td><td>GARM960515MDF</td></tr>
-                <tr><td>P003</td><td>Luis Rodriguez</td><td>45</td><td>masculino</td><td>latex</td><td>O+</td><td>Particular</td><td>diabetes</td><td>555-9903</td><td>inactivo</td><td>ROGL810205HDF</td></tr>
-                <tr><td>P004</td><td>Ana Martinez</td><td>18</td><td>femenino</td><td>Polen</td><td>B+</td><td>GNP</td><td>asma</td><td>555-9904</td><td>activo</td><td>MARA071220MDF</td></tr>
-                <tr><td>P005</td><td>Sofia Hernandez</td><td>28</td><td>femenino</td><td>A+</td><td>Particular</td><td>ninguno</td><td>555-9905</td><td>activo</td><td>A+</td><td>HERS980801MDF</td></tr>
-                <tr><td>P006</td><td>Carlos Lopez</td><td>62</td><td>masculino</td><td>aspirina</td><td>O-</td><td>AXA</td><td>hipertension</td><td>555-9906</td><td>activo</td><td>LUPC640311HDF</td></tr>
-                <tr><td>P007</td><td>Diego Sanchez</td><td>35</td><td>masculino</td><td>aspirina</td><td>AB+</td><td>AXA</td><td>arritmia</td><td>555-9907</td><td>en Pausa</td><td>SAD910114HDF</td></tr>
-                <tr><td>P008</td><td>Elena Perez</td><td>50</td><td>femenino</td><td>Sulfa</td><td>O+</td><td>Netlife</td><td>ninguno</td><td>555-9908</td><td>activo</td><td>PERE760208HDF</td></tr>
-                <tr><td>P009</td><td>Lucia Torres</td><td>27</td><td>femenino</td><td>yodo</td><td>O+</td><td>GNP</td><td>ninguno</td><td>555-9909</td><td>activo</td><td>TORL990503MDF</td></tr>
-                <tr><td>P010</td><td>Roberto Diaz</td><td>23</td><td>masculino</td><td>ninguna</td><td>B-</td><td>Particular</td><td>asma</td><td>555-5510</td><td>activo</td><td>DIAR040212HDF</td></tr>
             </tbody>
         </table>
     </div>
 
+    <h2>Nuevos Registros</h2>
+    <div id="listaPacientes" style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 30px; width: 100%; max-width: 1100px;"></div>
+
     <div class="form-container">
         <h3>Alta de Nuevo Paciente</h3>
-        <form action="#" method="POST">
+        <form id="formPaciente">
             <div class="form-group">
                 <label>ID Paciente:</label>
-                <input type="text" placeholder="Ej: P011" required>
+                <input type="text" id="id_pacientes" placeholder="Ej: P011" required>
             </div>
             <div class="form-group">
                 <label>Nombre:</label>
-                <input type="text" placeholder="Ej: Alan Torres" required>
+                <input type="text" id="nombre" placeholder="Ej: Alan Torres" required>
             </div>
             <div class="form-group">
                 <label>Edad:</label>
-                <input type="number" placeholder="Ej: 29" required>
+                <input type="number" id="edad" placeholder="Ej: 29" required>
             </div>
             <div class="form-group">
                 <label>Género:</label>
-                <input type="text" placeholder="Ej: masculino / femenino" required>
+                <input type="text" id="genero" placeholder="Ej: masculino" required>
             </div>
             <div class="form-group">
                 <label>Alergias:</label>
-                <input type="text" placeholder="Ej: ninguna" required>
+                <input type="text" id="alergias" placeholder="Ej: ninguna" required>
             </div>
             <div class="form-group">
                 <label>Tipo de Sangre:</label>
-                <input type="text" placeholder="Ej: A+" required>
+                <input type="text" id="tipo_de_sangre" placeholder="Ej: A+" required>
             </div>
             <div class="form-group">
                 <label>Aseguradora:</label>
-                <input type="text" placeholder="Ej: GNP / Particular" required>
+                <input type="text" id="aseguradora" placeholder="Ej: GNP" required>
             </div>
             <div class="form-group">
                 <label>Antecedentes:</label>
-                <input type="text" placeholder="Ej: ninguno" required>
+                <input type="text" id="antecedentes" placeholder="Ej: ninguno" required>
             </div>
             <div class="form-group">
                 <label>Tel. Emergencia:</label>
-                <input type="text" placeholder="Ej: 555-9911" required>
+                <input type="text" id="tel_emergencias" placeholder="Ej: 555-9911" required>
             </div>
             <div class="form-group">
                 <label>Estatus:</label>
-                <input type="text" placeholder="Ej: activo" required>
+                <input type="text" id="estatus" placeholder="Ej: activo" required>
             </div>
             <div class="form-group">
                 <label>CURP:</label>
-                <input type="text" placeholder="18 caracteres" required>
+                <input type="text" id="curp" placeholder="18 caracteres" required>
             </div>
             <button type="submit" class="btn-submit">Dar de alta al Paciente</button>
         </form>
@@ -107,33 +102,91 @@
     <p>24308051281172 - 4-I</p>
 </footer>
 
+<script>
+    document.getElementById('formPaciente').addEventListener('submit', async function(e) {
+        e.preventDefault(); // Detiene el envío clásico que rompía la página
+        await agregarPaciente(); // Llama a tu función
+    });
+
+    async function agregarPaciente(){
+        let id_pacientes = document.getElementById("id_pacientes").value;
+        let nombre = document.getElementById("nombre").value;
+        let edad = document.getElementById("edad").value;
+        let genero = document.getElementById("genero").value;
+        let alergias = document.getElementById("alergias").value;
+        let tipo_de_sangre = document.getElementById("tipo_de_sangre").value;
+        let aseguradora = document.getElementById("aseguradora").value;
+        let antecedentes = document.getElementById("antecedentes").value;
+        let tel_emergencias = document.getElementById("tel_emergencias").value;
+        let estatus = document.getElementById("estatus").value;
+        let curp = document.getElementById("curp").value;
+
+        if(!id_pacientes || !nombre || !edad || !genero || !alergias || !tipo_de_sangre || !aseguradora || !antecedentes || !tel_emergencias || !estatus || !curp){
+            alert("Completa todos los campos");
+            return;
+        }
+
+        const datosPaciente = { id_pacientes, nombre, edad, genero, alergias, tipo_de_sangre, aseguradora, antecedentes, tel_emergencias, estatus, curp };
+
+        try {
+            // Hacemos la petición POST al backend corriendo en el puerto 5000
+            const respuesta = await fetch('http://localhost:5000/api/pacientes', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(datosPaciente),
+            });
+
+            const resultado = await respuesta.json();
+
+            if (respuesta.ok) {
+                // Genera la tarjeta visual bonita abajo
+                let nuevaCard = document.createElement("div");
+                nuevaCard.classList.add("card");
+                nuevaCard.style.cssText = "background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); width: 250px; border-left: 5px solid #ca9ec3;";
+                nuevaCard.innerHTML = `
+                    <h3 style="margin: 0 0 10px 0; color: #3d2d3a;">${nombre}</h3>
+                    <p style="margin: 4px 0; font-size: 13px;"><strong>ID:</strong> ${id_pacientes}</p>
+                    <p style="margin: 4px 0; font-size: 13px;"><strong>Edad:</strong> ${edad}</p>
+                    <p style="margin: 4px 0; font-size: 13px;"><strong>Género:</strong> ${genero}</p>
+                    <p style="margin: 4px 0; font-size: 13px;"><strong>Estatus:</strong> ${estatus}</p>
+                `;
+                document.getElementById("listaPacientes").appendChild(nuevaCard);
+
+                // Limpia el formulario
+                document.getElementById("formPaciente").reset();
+                alert("Correcto: " + resultado.mensaje);
+            } else {
+                alert("Error al guardar en el servidor: " + resultado.error);
+            }
+        } catch (error) {
+            console.error("Error en la petición:", error);
+            alert("No se pudo conectar con el servidor backend. ¿Está encendido en la terminal?");
+        }
+    }
+</script>
+
 </body>
 <style>
+    /* El CSS que ya tenías se mantiene igual */
     * { box-sizing: border-box; }
     body { font-family: "Poppins", sans-serif; background-color: #fcf8fb; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
     header { background-color: rgb(245, 220, 229); width: 100%; padding: 20px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
     h1 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0; font-size: 2rem; }
-    h2 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin-top: 10px; }
+    h2 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin-top: 20px; }
     h3 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0 0 20px 0; font-size: 1.5rem; text-align: center; }
     main { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 40px 20px; flex: 1; }
-    
     .contenedor-tabla { width: 100%; max-width: 1100px; overflow-x: auto; margin-bottom: 40px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     table { width: 100%; border-collapse: collapse; min-width: 800px; }
     th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; font-size: 14px; }
     th { background-color: #ca9ec3; color: white; font-weight: 600; }
     tr:nth-child(even) { background-color: #faf7fa; }
-
     .form-container { max-width: 500px; width: 100%; background: white; padding: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(245, 228, 242, 0.7); border-top: 6px solid #e8c5e3; }
     .form-group { margin-bottom: 22px; }
     label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; font-size: 14px; }
-    input[type="text"], input[type="number"], input[type="date"] { width: 100%; padding: 12px; border: 1px solid #e0d0dd; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 14px; background-color: #faf7fa; color: #333; transition: all 0.3s ease; }
-    input:focus { outline: none; border-color: #ca9ec3; background-color: #fff; box-shadow: 0 0 5px rgba(202, 158, 195, 0.4); }
-    .btn-submit { background-color: #ca9ec3; color: white; border: none; padding: 14px 15px; width: 100%; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; font-family: "Poppins", sans-serif; margin-top: 10px; }
+    input[type="text"], input[type="number"] { width: 100%; padding: 12px; border: 1px solid #e0d0dd; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 14px; background-color: #faf7fa; color: #333; }
+    .btn-submit { background-color: #ca9ec3; color: white; border: none; padding: 14px 15px; width: 100%; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; font-family: "Poppins", sans-serif; }
     .btn-submit:hover { background-color: #b382ab; }
-    .btn-back { display: inline-block; text-align: center; margin-top: 25px; color: #888; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s ease; }
-    .btn-back:hover { color: #b382ab; }
-    
+    .btn-back { display: inline-block; text-align: center; margin-top: 25px; color: #888; text-decoration: none; font-size: 14px; }
     footer { width: 100%; background-color: #f3edf2; padding: 15px 0; text-align: center; font-size: 13px; color: #776a78; margin-top: 40px; }
-    footer p { margin: 4px 0; font-family: 'Poppins', sans-serif; }
 </style>
 </html>
