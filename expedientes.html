@@ -9,83 +9,88 @@
 <body>
 
 <header>
-    <h1>Historial Clínico - Mario Dentals</h1>
+    <h1>Expedientes Clínicos - Mario Dentals</h1>
     <img width="250" align="center" src="logo.png">
-    <p>Visualización y apertura de expedientes clínicos.</p>
+    <p>Historial clínico y seguimiento de tratamientos.</p>
 </header>
 
 <main>
-    <h2>Expedientes Médicos</h2>
+    <h2>Historial Clínico</h2>
     <div class="contenedor-tabla">
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Nombre_Pa</th>
-                    <th>Fecha_Vis</th>
-                    <th>Motivo_Pri</th>
+                    <th>ID Expediente</th>
+                    <th>ID Paciente</th>
                     <th>Diagnóstico</th>
-                    <th>Evolución</th>
-                    <th>Receta_Medica</th>
-                    <th>Plan_A_Seguir</th>
-                    <th>Riesgos</th>
+                    <th>Tratamiento</th>
+                    <th>Fecha Creación</th>
+                    <th>Observaciones</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td>E001</td><td>Juan Perez</td><td>12/05/2026</td><td>Dolor en muela</td><td>caries en molar 36</td><td>inflamacion reducida</td><td>ibuprofeno 600mg</td><td>cita para limpieza</td><td>Alergia a Penicilina</td></tr>
-                <tr><td>E002</td><td>Maria Garcia</td><td>26/03/2026</td><td>sangrado de encias</td><td>gingivitis inicial</td><td>mejoria con enjuague</td><td>clorhexidina gel</td><td>limpieza profunda</td><td>Hipertension</td></tr>
-                <tr><td>E003</td><td>Luis Rodriguez</td><td>11/02/2026</td><td>protesis floja</td><td>desgaste de puente</td><td>se ajusto soporte</td><td>N/A</td><td>Nueva corona</td><td>Diabetes Tipo 2</td></tr>
-                <tr><td>E004</td><td>Ana Martinez</td><td>12/02/2026</td><td>Estetica dental</td><td>fractura de incisivo</td><td>resina aplicada</td><td>evitar solidos</td><td>Pulido final</td><td>Ninguno</td></tr>
-                <tr><td>E005</td><td>Carlos Lopez</td><td>15/01/2026</td><td>Control Brackets</td><td>apiñamiento leve</td><td>cambio de ligas</td><td>cera ortodontica</td><td>Ajuste mensual</td><td>Hipertension</td></tr>
-                <tr><td>E006</td><td>Sofia Hernandez</td><td>10/03/2026</td><td>sensibilidad frio</td><td>dentina expuesta</td><td>barniz aplicado</td><td>pasta Sensodyne</td><td>seguimiento</td><td>Alergia Sulfa</td></tr>
-                <tr><td>E007</td><td>Diego Sanchez</td><td>20/12/2025</td><td>revision anual</td><td>salud bucal buena</td><td>sin novedades</td><td>fluor preventivo</td><td>cita en 1 año</td><td>Asma</td></tr>
-                <tr><td>E008</td><td>Elena Perez</td><td>01/02/2026</td><td>Infeccion molar</td><td>absceso dental</td><td>drenaje realizado</td><td>amoxicilina 500mg</td><td>endodoncia</td><td>Ninguno</td></tr>
-                <tr><td>E009</td><td>Roberto Diaz</td><td>14/01/2026</td><td>dolor infantil</td><td>caries biberon</td><td>pulpotomia</td><td>paracetamol sol.</td><td>mantenedor</td><td>Ninguno</td></tr>
-                <tr><td>E010</td><td>Lucia Torres</td><td>20/05/2026</td><td>extraccion</td><td>muela del juicio</td><td>cirugia exitosa</td><td>ketorolaco 10mg</td><td>retirar puntos</td><td>Alergia yodo</td></tr>
+                <tr><td>E001</td><td>P001</td><td>Caries múltiples dentales</td><td>Resinas e Higiene Bucal</td><td>2026-01-10</td><td>Paciente con sensibilidad extrema</td></tr>
+                <tr><td>E002</td><td>P002</td><td>Pulpitis irreversible aguda</td><td>Endodoncia molar superior</td><td>2026-01-12</td><td>Requiere corona estética urgente</td></tr>
+                <tr><td>E003</td><td>P003</td><td>Tercer molar impactado</td><td>Cirugía de extracción molar</td><td>2026-01-15</td><td>Tomar antibiótico recetado</td></tr>
+                <tr><td>E004</td><td>P004</td><td>Maloclusión dental tipo II</td><td>Tratamiento de Ortodoncia</td><td>2026-01-18</td><td>Citas mensuales de ajuste</td></tr>
+                <tr><td>E005</td><td>P005</td><td>Gingivitis moderada crónica</td><td>Profilaxis y raspado radicular</td><td>2026-01-20</td><td>Uso obligatorio de hilo dental</td></tr>
+                <tr><td>E006</td><td>P006</td><td>Manchas por tetraciclina</td><td>Blanqueamiento clínico estético</td><td>2026-01-22</td><td>Evitar comidas con colorantes</td></tr>
+                <tr><td>E007</td><td>P007</td><td>Edentulismo parcial superior</td><td>Prótesis removible de acrílico</td><td>2026-01-25</td><td>Ajuste de ganchos en dos semanas</td></tr>
+                <tr><td>E008</td><td>P008</td><td>Fractura ángulo incisal de diente</td><td>Reconstrucción estético resina</td><td>2026-01-28</td><td>Evitar morder alimentos duros</td></tr>
+                <tr><td>E009</td><td>P009</td><td>Diente retenido canino</td><td>Monitoreo radiográfico preventivo</td><td>2026-02-01</td><td>Evaluar cirugía a futuro</td></tr>
+                <tr><td>E010</td><td>P010</td><td>Absceso periapical dental</td><td>Drenaje y tratamiento canales</td><td>2026-02-03</td><td>Paciente hipertenso controlado</td></tr>
             </tbody>
         </table>
     </div>
 
+    <h2>Nuevos Registros (Base de Datos)</h2>
+    <div style="width: 100%; max-width: 1100px; margin-bottom: 15px;">
+        <input type="text" id="inputBuscar" onkeyup="buscarExpediente()" placeholder="🔍 Buscar expediente por ID Expediente o Paciente..." style="width: 100%; max-width: 400px; padding: 10px 15px; border-radius: 20px; border: 1px solid #ca9ec3;">
+    </div>
+
+    <div class="contenedor-tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Expediente</th>
+                    <th>ID Paciente</th>
+                    <th>Diagnóstico</th>
+                    <th>Tratamiento</th>
+                    <th>Fecha Creación</th>
+                    <th>Observaciones</th>
+                    <th style="text-align: center;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaNuevosRegistrosCuerpo"></tbody>
+        </table>
+    </div>
+
     <div class="form-container">
-        <h3>Agregar Nuevo Expediente</h3>
-        <form action="#" method="POST">
+        <h3 id="formTitulo">Alta de Nuevo Expediente</h3>
+        <p id="formAvisoId" style="text-align: center; color: #ca9ec3; font-size: 13px; font-weight: bold; margin-top: -10px; margin-bottom: 20px;">* El ID se generará automáticamente (Autoincrement)</p>
+        <form id="formExpediente" onsubmit="event.preventDefault();">
             <div class="form-group">
-                <label>ID Expediente:</label>
-                <input type="text" placeholder="Ej: E011" required>
-            </div>
-            <div class="form-group">
-                <label>Nombre Paciente:</label>
-                <input type="text" placeholder="Ej: Juan Pérez" required>
-            </div>
-            <div class="form-group">
-                <label>Fecha Visita:</label>
-                <input type="text" placeholder="Ej: 22/05/2026" required>
-            </div>
-            <div class="form-group">
-                <label>Motivo Principal:</label>
-                <input type="text" placeholder="Ej: Limpieza de rutina" required>
+                <label>ID Paciente:</label>
+                <input type="text" id="id_paciente" placeholder="Ej: P011" required>
             </div>
             <div class="form-group">
                 <label>Diagnóstico:</label>
-                <input type="text" placeholder="Ej: Sarro leve" required>
+                <input type="text" id="diagnostico" placeholder="Ej: Caries dental dental" required>
             </div>
             <div class="form-group">
-                <label>Evolución:</label>
-                <input type="text" placeholder="Ej: Excelente respuesta" required>
+                <label>Tratamiento:</label>
+                <input type="text" id="tratamiento" placeholder="Ej: Aplicación de Resina" required>
             </div>
             <div class="form-group">
-                <label>Receta Médica:</label>
-                <input type="text" placeholder="Ej: Enjuague bucal" required>
+                <label>Fecha Creación:</label>
+                <input type="text" id="fecha_creacion" placeholder="Ej: 2026-06-08" required>
             </div>
             <div class="form-group">
-                <label>Plan A Seguir:</label>
-                <input type="text" placeholder="Ej: Revisión en 6 meses" required>
+                <label>Observaciones:</label>
+                <input type="text" id="observaciones" placeholder="Indicaciones especiales" required>
             </div>
-            <div class="form-group">
-                <label>Riesgos:</label>
-                <input type="text" placeholder="Ej: Ninguno" required>
-            </div>
-            <button type="submit" class="btn-submit">Guardar en Historial Clínico</button>
+            <button type="button" id="btnAccionForm" class="btn-submit" onclick="procesarFormulario()">Crear Expediente</button>
+            <button type="button" id="btnCancelarEdicion" class="btn-cancelar" onclick="cancelarEdicion()" style="display: none;">Cancelar Edición</button>
         </form>
     </div>
 
@@ -97,33 +102,137 @@
     <p>24308051281172 - 4-I</p>
 </footer>
 
+<script>
+    const URL_API = '/api/expedientes';
+    let listaExpedientesMemoria = [];
+    let idExpedienteEditando = null;
+
+    window.onload = function() { obtenerNuevosExpedientes(); };
+
+    async function obtenerNuevosExpedientes() {
+        try {
+            const res = await fetch(URL_API);
+            listaExpedientesMemoria = await res.json();
+            renderizarTabla(listaExpedientesMemoria);
+        } catch (e) { console.error(e); }
+    }
+
+    function renderizarTabla(expedientes) {
+        const tbody = document.getElementById("tablaNuevosRegistrosCuerpo");
+        tbody.innerHTML = "";
+        expedientes.forEach(e => {
+            const idSeguro = e._id ? e._id : 'id_invalido';
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td><strong>${e.id_expediente || 'S/N'}</strong></td>
+                <td>${e.id_paciente || ''}</td>
+                <td>${e.diagnostico || ''}</td>
+                <td>${e.tratamiento || ''}</td>
+                <td>${e.fecha_creacion || ''}</td>
+                <td>${e.observaciones || ''}</td>
+                <td style="text-align: center;">
+                    <button class="btn-accion-tabla btn-editar" onclick="prepararEdicion('${idSeguro}', '${e.id_expediente}', '${e.id_paciente}', '${e.diagnostico}', '${e.tratamiento}', '${e.fecha_creacion}', '${e.observaciones}')">✏️ Editar</button>
+                    <button class="btn-accion-tabla btn-eliminar" onclick="eliminarExpediente('${idSeguro}')">🗑️ Borrar</button>
+                </td>
+            `;
+            tbody.appendChild(fila);
+        });
+    }
+
+    function buscarExpediente() {
+        const txt = document.getElementById("inputBuscar").value.toLowerCase();
+        const filt = listaExpedientesMemoria.filter(e => 
+            (e.id_expediente && e.id_expediente.toLowerCase().includes(txt)) || 
+            (e.id_paciente && e.id_paciente.toLowerCase().includes(txt))
+        );
+        renderizarTabla(filt);
+    }
+
+    function procesarFormulario() {
+        if (idExpedienteEditando) guardarCambios(); else agregarExpediente();
+    }
+
+    async function agregarExpediente() {
+        const datos = recolectarCampos(); if (!datos) return;
+        try {
+            const res = await fetch(URL_API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos) });
+            if (res.ok) { document.getElementById("formExpediente").reset(); obtenerNuevosExpedientes(); }
+        } catch (e) { alert("Error"); }
+    }
+
+    function prepararEdicion(_id, id_expediente, id_paciente, diagnostico, tratamiento, fecha_creacion, observaciones) {
+        idExpedienteEditando = _id;
+        document.getElementById("id_paciente").value = id_paciente;
+        document.getElementById("diagnostico").value = diagnostico;
+        document.getElementById("tratamiento").value = tratamiento;
+        document.getElementById("fecha_creacion").value = fecha_creacion;
+        document.getElementById("observaciones").value = observaciones;
+
+        document.getElementById("formTitulo").innerText = `Modificando Expediente (${id_expediente})`;
+        const btn = document.getElementById("btnAccionForm");
+        btn.innerText = "Guardar Cambios"; btn.style.backgroundColor = "#4a90e2";
+        document.getElementById("btnCancelarEdicion").style.display = "block";
+    }
+
+    async function guardarCambios() {
+        const datos = recolectarCampos(); if (!datos) return;
+        try {
+            const res = await fetch(`${URL_API}/${idExpedienteEditando}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos) });
+            if (res.ok) { cancelarEdicion(); obtenerNuevosExpedientes(); }
+        } catch (e) { alert("Error"); }
+    }
+
+    async function eliminarExpediente(_id) {
+        if (!confirm("¿Eliminar expediente?")) return;
+        try {
+            const res = await fetch(`${URL_API}/${_id}`, { method: 'DELETE' });
+            if (res.ok) { obtenerNuevosExpedientes(); }
+        } catch (e) { alert("Error"); }
+    }
+
+    function cancelarEdicion() {
+        idExpedienteEditando = null; document.getElementById("formExpediente").reset();
+        document.getElementById("formTitulo").innerText = "Alta de Nuevo Expediente";
+        const btn = document.getElementById("btnAccionForm");
+        btn.innerText = "Crear Expediente"; btn.style.backgroundColor = "#ca9ec3";
+        document.getElementById("btnCancelarEdicion").style.display = "none";
+    }
+
+    function recolectarCampos() {
+        let id_paciente = document.getElementById("id_paciente").value;
+        let diagnostico = document.getElementById("diagnostico").value;
+        let tratamiento = document.getElementById("tratamiento").value;
+        let fecha_creacion = document.getElementById("fecha_creacion").value;
+        let observaciones = document.getElementById("observaciones").value;
+        if(!id_paciente || !diagnostico || !tratamiento || !fecha_creacion || !observaciones) return null;
+        return { id_paciente, diagnostico, tratamiento, fecha_creacion, observaciones };
+    }
+</script>
+
 </body>
 <style>
     * { box-sizing: border-box; }
     body { font-family: "Poppins", sans-serif; background-color: #fcf8fb; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
     header { background-color: rgb(245, 220, 229); width: 100%; padding: 20px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
     h1 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0; font-size: 2rem; }
-    h2 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin-top: 10px; }
+    h2 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin-top: 20px; }
     h3 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0 0 20px 0; font-size: 1.5rem; text-align: center; }
     main { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 40px 20px; flex: 1; }
-    
     .contenedor-tabla { width: 100%; max-width: 1100px; overflow-x: auto; margin-bottom: 40px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     table { width: 100%; border-collapse: collapse; min-width: 800px; }
     th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; font-size: 14px; }
     th { background-color: #ca9ec3; color: white; font-weight: 600; }
     tr:nth-child(even) { background-color: #faf7fa; }
-
-    .form-container { max-width: 500px; width: 100%; background: white; padding: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(245, 228, 242, 0.7); border-top: 6px solid #e8c5e3; }
+    .form-container { max-width: 500px; width: 100%; background: white; padding: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
     .form-group { margin-bottom: 22px; }
     label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; font-size: 14px; }
-    input[type="text"], input[type="number"], input[type="date"] { width: 100%; padding: 12px; border: 1px solid #e0d0dd; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 14px; background-color: #faf7fa; color: #333; transition: all 0.3s ease; }
-    input:focus { outline: none; border-color: #ca9ec3; background-color: #fff; box-shadow: 0 0 5px rgba(202, 158, 195, 0.4); }
-    .btn-submit { background-color: #ca9ec3; color: white; border: none; padding: 14px 15px; width: 100%; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; font-family: "Poppins", sans-serif; margin-top: 10px; }
-    .btn-submit:hover { background-color: #b382ab; }
-    .btn-back { display: inline-block; text-align: center; margin-top: 25px; color: #888; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s ease; }
-    .btn-back:hover { color: #b382ab; }
-    
+    input[type="text"], input[type="number"] { width: 100%; padding: 12px; border: 1px solid #e0d0dd; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 14px; background-color: #faf7fa; color: #333; }
+    .btn-submit { background-color: #ca9ec3; color: white; border: none; padding: 14px 15px; width: 100%; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; font-family: "Poppins", sans-serif; }
+    .btn-cancelar { background-color: #999; color: white; border: none; padding: 10px 15px; width: 100%; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; font-family: "Poppins", sans-serif; margin-top: 10px; }
+    .btn-accion-tabla { border: none; padding: 5px 10px; border-radius: 4px; font-size: 12px; cursor: pointer; margin: 2px; }
+    .btn-editar { background-color: #e6f0fa; color: #2b6cb0; }
+    .btn-eliminar { background-color: #ffebeb; color: #c53030; }
+    .btn-back { display: inline-block; text-align: center; margin-top: 25px; color: #888; text-decoration: none; font-size: 14px; }
     footer { width: 100%; background-color: #f3edf2; padding: 15px 0; text-align: center; font-size: 13px; color: #776a78; margin-top: 40px; }
-    footer p { margin: 4px 0; font-family: 'Poppins', sans-serif; }
 </style>
 </html>

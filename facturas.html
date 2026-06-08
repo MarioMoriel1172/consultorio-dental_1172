@@ -9,88 +9,100 @@
 <body>
 
 <header>
-    <h1>Contabilidad y SAT - Mario Dentals</h1>
+    <h1>Control de Facturas - Mario Dentals</h1>
     <img width="250" align="center" src="logo.png">
-    <p>Panel de visualización financiera y emisión de facturas.</p>
+    <p>Panel de facturación e ingresos de la clínica.</p>
 </header>
 
 <main>
-    <h2>Historial de Facturación</h2>
+    <h2>Facturas Emitidas</h2>
     <div class="contenedor-tabla">
         <table>
             <thead>
                 <tr>
-                    <th>ID Fact</th>
-                    <th>Nombre_Cli</th>
+                    <th>ID Factura</th>
+                    <th>ID Paciente</th>
                     <th>RFC</th>
                     <th>Concepto</th>
-                    <th>Subtotal</th>
-                    <th>IVA</th>
-                    <th>Retenciones</th>
-                    <th>Total_Fact</th>
-                    <th>Ganancia</th>
-                    <th>Estatus_Sa</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                    <th>Método Pago</th>
+                    <th>Estatus</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td>F001</td><td>Juan Perez</td><td>PERJ020110XY1</td><td>limpieza y resina</td><td>1724.14</td><td>308.91</td><td>0</td><td>2000</td><td>1724.14</td><td>vigente</td></tr>
-                <tr><td>F002</td><td>Maria Garcia</td><td>GARM960515A22</td><td>endodoncia molar</td><td>3879.31</td><td>620.69</td><td>0</td><td>4500</td><td>3879.31</td><td>vigente</td></tr>
-                <tr><td>F003</td><td>Carlos Lopez</td><td>LOC640311C44</td><td>extraccion simple</td><td>1293.1</td><td>206.9</td><td>0</td><td>1500</td><td>1293.1</td><td>vigente</td></tr>
-                <tr><td>F004</td><td>Sofia Hernandez</td><td>HES980801D55</td><td>blanqueamiento</td><td>3017.24</td><td>482.75</td><td>0</td><td>3500</td><td>3017.24</td><td>vigente</td></tr>
-                <tr><td>F005</td><td>Lucia Torres</td><td>TOL990303H99</td><td>corona porcelana</td><td>5172.41</td><td>827.59</td><td>0</td><td>6000</td><td>5172.41</td><td>vigente</td></tr>
-                <tr><td>F006</td><td>Diego Sanchez</td><td>SAD910114E66</td><td>mensualidad ortod.</td><td>2155.17</td><td>344.83</td><td>0</td><td>2500</td><td>2155.17</td><td>Cancelado</td></tr>
-                <tr><td>F007</td><td>Elena Perez</td><td>PEE760208F77</td><td>consulta gral</td><td>603.45</td><td>96.55</td><td>0</td><td>700</td><td>603.45</td><td>vigente</td></tr>
-                <tr><td>F008</td><td>Luis Rodriguez</td><td>ROL810205B33</td><td>protesis parcial</td><td>2046.81</td><td>1103.45</td><td>0</td><td>8000</td><td>6896.55</td><td>vigente</td></tr>
-                <tr><td>F009</td><td>Jorge Cano</td><td>CANJ700603H12</td><td>Trat. Periodoncia</td><td>2586.21</td><td>413.79</td><td>0</td><td>3000</td><td>2586.21</td><td>vigente</td></tr>
-                <tr><td>F010</td><td>Silvia Noe</td><td>NOES920925M99</td><td>implante titanio</td><td>12931.03</td><td>2068.97</td><td>0</td><td>15000</td><td>12931.03</td><td>En Proceso</td></tr>
+                <tr><td>F001</td><td>P001</td><td>XAXX010101000</td><td>Limpieza Dental profunda</td><td>600</td><td>2026-01-10</td><td>Efectivo</td><td>pagada</td></tr>
+                <tr><td>F002</td><td>P002</td><td>GARM960515AAA</td><td>Tratamiento Endodoncia</td><td>2500</td><td>2026-01-12</td><td>Tarjeta</td><td>pagada</td></tr>
+                <tr><td>F003</td><td>P003</td><td>MENC790822BBB</td><td>Extracción de pieza</td><td>800</td><td>2026-01-15</td><td>Transferencia</td><td>pagada</td></tr>
+                <tr><td>F004</td><td>P004</td><td>MARA891105CCC</td><td>Colocación de Brackets</td><td>5000</td><td>2026-01-18</td><td>Tarjeta</td><td>pendiente</td></tr>
+                <tr><td>F005</td><td>P005</td><td>RODL740312DDD</td><td>Consulta General valoración</td><td>300</td><td>2026-01-20</td><td>Efectivo</td><td>pagada</td></tr>
+                <tr><td>F006</td><td>P006</td><td>LOPS040719EEE</td><td>Blanqueamiento Láser</td><td>3500</td><td>2026-01-22</td><td>Tarjeta</td><td>pagada</td></tr>
+                <tr><td>F007</td><td>P007</td><td>GOMP640228FFF</td><td>Prótesis Dental Parcial</td><td>8000</td><td>2026-01-25</td><td>Transferencia</td><td>pagada</td></tr>
+                <tr><td>F008</td><td>P008</td><td>FERL961014GGG</td><td>Resina Estética IV</td><td>700</td><td>2026-01-28</td><td>Efectivo</td><td>pendiente</td></tr>
+                <tr><td>F009</td><td>P009</td><td>TORD051201HHH</td><td>Radiografía Panorámica</td><td>450</td><td>2026-02-01</td><td>Efectivo</td><td>pagada</td></tr>
+                <tr><td>F010</td><td>P010</td><td>RAME830125III</td><td>Cirugía de Tercer Molar</td><td>4000</td><td>2026-02-03</td><td>Tarjeta</td><td>pagada</td></tr>
             </tbody>
         </table>
     </div>
 
+    <h2>Nuevos Registros (Base de Datos)</h2>
+    <div style="width: 100%; max-width: 1100px; margin-bottom: 15px;">
+        <input type="text" id="inputBuscar" onkeyup="buscarFactura()" placeholder="🔍 Buscar factura por ID Factura o RFC..." style="width: 100%; max-width: 400px; padding: 10px 15px; border-radius: 20px; border: 1px solid #ca9ec3;">
+    </div>
+
+    <div class="contenedor-tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Factura</th>
+                    <th>ID Paciente</th>
+                    <th>RFC</th>
+                    <th>Concepto</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                    <th>Método Pago</th>
+                    <th>Estatus</th>
+                    <th style="text-align: center;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaNuevosRegistrosCuerpo"></tbody>
+        </table>
+    </div>
+
     <div class="form-container">
-        <h3>Generar Nueva Factura</h3>
-        <form action="#" method="POST">
+        <h3 id="formTitulo">Alta de Nueva Factura</h3>
+        <p id="formAvisoId" style="text-align: center; color: #ca9ec3; font-size: 13px; font-weight: bold; margin-top: -10px; margin-bottom: 20px;">* El ID se generará automáticamente (Autoincrement)</p>
+        <form id="formFactura" onsubmit="event.preventDefault();">
             <div class="form-group">
-                <label>ID Factura:</label>
-                <input type="text" placeholder="Ej: F011" required>
-            </div>
-            <div class="form-group">
-                <label>Nombre Cliente:</label>
-                <input type="text" required>
+                <label>ID Paciente:</label>
+                <input type="text" id="id_paciente" placeholder="Ej: P011" required>
             </div>
             <div class="form-group">
                 <label>RFC:</label>
-                <input type="text" placeholder="13 dígitos" required>
+                <input type="text" id="RFC" placeholder="RFC del Cliente" required>
             </div>
             <div class="form-group">
                 <label>Concepto:</label>
-                <input type="text" placeholder="Ej: Consulta o Tratamiento" required>
+                <input type="text" id="concepto" placeholder="Ej: Tratamiento Dental" required>
             </div>
             <div class="form-group">
-                <label>Subtotal ($):</label>
-                <input type="number" step="0.01" placeholder="Ej: 3879.31" required>
+                <label>Monto ($):</label>
+                <input type="number" id="monto" placeholder="Ej: 1500" required>
             </div>
             <div class="form-group">
-                <label>IVA ($):</label>
-                <input type="number" step="0.01" placeholder="Ej: 620.69" required>
+                <label>Fecha:</label>
+                <input type="text" id="fecha" placeholder="Ej: 2026-06-08" required>
             </div>
             <div class="form-group">
-                <label>Retenciones ($):</label>
-                <input type="number" step="0.01" placeholder="Ej: 0.00" required>
+                <label>Método de Pago:</label>
+                <input type="text" id="metodo_pago" placeholder="Efectivo / Tarjeta" required>
             </div>
             <div class="form-group">
-                <label>Total Factura ($):</label>
-                <input type="number" step="0.01" placeholder="Ej: 4500.00" required>
+                <label>Estatus:</label>
+                <input type="text" id="estatus" placeholder="pagada / pendiente" required>
             </div>
-            <div class="form-group">
-                <label>Ganancia ($):</label>
-                <input type="number" step="0.01" placeholder="Ej: 3879.31" required>
-            </div>
-            <div class="form-group">
-                <label>Estatus SAT:</label>
-                <input type="text" placeholder="Ej: vigente" required>
-            </div>
-            <button type="submit" class="btn-submit">Generar Registro de Factura</button>
+            <button type="button" id="btnAccionForm" class="btn-submit" onclick="procesarFormulario()">Registrar Factura</button>
+            <button type="button" id="btnCancelarEdicion" class="btn-cancelar" onclick="cancelarEdicion()" style="display: none;">Cancelar Edición</button>
         </form>
     </div>
 
@@ -102,33 +114,143 @@
     <p>24308051281172 - 4-I</p>
 </footer>
 
+<script>
+    const URL_API = '/api/facturas';
+    let listaFacturasMemoria = [];
+    let idFacturaEditando = null;
+
+    window.onload = function() { obtenerNuevasFacturas(); };
+
+    async function obtenerNuevasFacturas() {
+        try {
+            const res = await fetch(URL_API);
+            listaFacturasMemoria = await res.json();
+            renderizarTabla(listaFacturasMemoria);
+        } catch (e) { console.error(e); }
+    }
+
+    function renderizarTabla(facturas) {
+        const tbody = document.getElementById("tablaNuevosRegistrosCuerpo");
+        tbody.innerHTML = "";
+        facturas.forEach(f => {
+            const idSeguro = f._id ? f._id : 'id_invalido';
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td><strong>${f.id_factura || 'S/N'}</strong></td>
+                <td>${f.id_paciente || ''}</td>
+                <td>${f.RFC || ''}</td>
+                <td>${f.concepto || ''}</td>
+                <td>$${f.monto || 0}</td>
+                <td>${f.fecha || ''}</td>
+                <td>${f.metodo_pago || ''}</td>
+                <td>${f.estatus || ''}</td>
+                <td style="text-align: center;">
+                    <button class="btn-accion-tabla btn-editar" onclick="prepararEdicion('${idSeguro}', '${f.id_factura}', '${f.id_paciente}', '${f.RFC}', '${f.concepto}', ${f.monto}, '${f.fecha}', '${f.metodo_pago}', '${f.estatus}')">✏️ Editar</button>
+                    <button class="btn-accion-tabla btn-eliminar" onclick="eliminarFactura('${idSeguro}')">🗑️ Borrar</button>
+                </td>
+            `;
+            tbody.appendChild(fila);
+        });
+    }
+
+    function buscarFactura() {
+        const txt = document.getElementById("inputBuscar").value.toLowerCase();
+        const filt = listaFacturasMemoria.filter(f => 
+            (f.id_factura && f.id_factura.toLowerCase().includes(txt)) || 
+            (f.RFC && f.RFC.toLowerCase().includes(txt))
+        );
+        renderizarTabla(filt);
+    }
+
+    function procesarFormulario() {
+        if (idFacturaEditando) guardarCambios(); else agregarFactura();
+    }
+
+    async function agregarFactura() {
+        const datos = recolectarCampos(); if (!datos) return;
+        try {
+            const res = await fetch(URL_API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos) });
+            if (res.ok) { document.getElementById("formFactura").reset(); obtenerNuevasFacturas(); }
+        } catch (e) { alert("Error"); }
+    }
+
+    function prepararEdicion(_id, id_factura, id_paciente, RFC, concepto, monto, fecha, metodo_pago, estatus) {
+        idFacturaEditando = _id;
+        document.getElementById("id_paciente").value = id_paciente;
+        document.getElementById("RFC").value = RFC;
+        document.getElementById("concepto").value = concepto;
+        document.getElementById("monto").value = monto;
+        document.getElementById("fecha").value = fecha;
+        document.getElementById("metodo_pago").value = metodo_pago;
+        document.getElementById("estatus").value = estatus;
+
+        document.getElementById("formTitulo").innerText = `Modificando Factura (${id_factura})`;
+        const btn = document.getElementById("btnAccionForm");
+        btn.innerText = "Guardar Cambios"; btn.style.backgroundColor = "#4a90e2";
+        document.getElementById("btnCancelarEdicion").style.display = "block";
+    }
+
+    async function guardarCambios() {
+        const datos = recolectarCampos(); if (!datos) return;
+        try {
+            const res = await fetch(`${URL_API}/${idFacturaEditando}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos) });
+            if (res.ok) { cancelarEdicion(); obtenerNuevasFacturas(); }
+        } catch (e) { alert("Error"); }
+    }
+
+    async function eliminarFactura(_id) {
+        if (!confirm("¿Eliminar factura?")) return;
+        try {
+            const res = await fetch(`${URL_API}/${_id}`, { method: 'DELETE' });
+            if (res.ok) { obtenerNuevasFacturas(); }
+        } catch (e) { alert("Error"); }
+    }
+
+    function cancelarEdicion() {
+        idFacturaEditando = null; document.getElementById("formFactura").reset();
+        document.getElementById("formTitulo").innerText = "Alta de Nueva Factura";
+        const btn = document.getElementById("btnAccionForm");
+        btn.innerText = "Registrar Factura"; btn.style.backgroundColor = "#ca9ec3";
+        document.getElementById("btnCancelarEdicion").style.display = "none";
+    }
+
+    function recolectarCampos() {
+        let id_paciente = document.getElementById("id_paciente").value;
+        let RFC = document.getElementById("RFC").value;
+        let concepto = document.getElementById("concepto").value;
+        let monto = document.getElementById("monto").value;
+        let fecha = document.getElementById("fecha").value;
+        let metodo_pago = document.getElementById("metodo_pago").value;
+        let estatus = document.getElementById("estatus").value;
+        if(!id_paciente || !RFC || !concepto || !monto || !fecha || !metodo_pago || !estatus) return null;
+        return { id_paciente, RFC, concepto, monto, fecha, metodo_pago, estatus };
+    }
+</script>
+
 </body>
 <style>
     * { box-sizing: border-box; }
     body { font-family: "Poppins", sans-serif; background-color: #fcf8fb; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
     header { background-color: rgb(245, 220, 229); width: 100%; padding: 20px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
     h1 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0; font-size: 2rem; }
-    h2 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin-top: 10px; }
+    h2 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin-top: 20px; }
     h3 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0 0 20px 0; font-size: 1.5rem; text-align: center; }
     main { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 40px 20px; flex: 1; }
-
     .contenedor-tabla { width: 100%; max-width: 1100px; overflow-x: auto; margin-bottom: 40px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     table { width: 100%; border-collapse: collapse; min-width: 800px; }
     th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; font-size: 14px; }
     th { background-color: #ca9ec3; color: white; font-weight: 600; }
     tr:nth-child(even) { background-color: #faf7fa; }
-
-    .form-container { max-width: 500px; width: 100%; background: white; padding: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(245, 228, 242, 0.7); border-top: 6px solid #e8c5e3; }
+    .form-container { max-width: 500px; width: 100%; background: white; padding: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
     .form-group { margin-bottom: 22px; }
     label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; font-size: 14px; }
-    input[type="text"], input[type="number"], input[type="date"] { width: 100%; padding: 12px; border: 1px solid #e0d0dd; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 14px; background-color: #faf7fa; color: #333; transition: all 0.3s ease; }
-    input:focus { outline: none; border-color: #ca9ec3; background-color: #fff; box-shadow: 0 0 5px rgba(202, 158, 195, 0.4); }
-    .btn-submit { background-color: #ca9ec3; color: white; border: none; padding: 14px 15px; width: 100%; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; font-family: "Poppins", sans-serif; margin-top: 10px; }
-    .btn-submit:hover { background-color: #b382ab; }
-    .btn-back { display: inline-block; text-align: center; margin-top: 25px; color: #888; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s ease; }
-    .btn-back:hover { color: #b382ab; }
-    
+    input[type="text"], input[type="number"] { width: 100%; padding: 12px; border: 1px solid #e0d0dd; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 14px; background-color: #faf7fa; color: #333; }
+    .btn-submit { background-color: #ca9ec3; color: white; border: none; padding: 14px 15px; width: 100%; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; font-family: "Poppins", sans-serif; }
+    .btn-cancelar { background-color: #999; color: white; border: none; padding: 10px 15px; width: 100%; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; font-family: "Poppins", sans-serif; margin-top: 10px; }
+    .btn-accion-tabla { border: none; padding: 5px 10px; border-radius: 4px; font-size: 12px; cursor: pointer; margin: 2px; }
+    .btn-editar { background-color: #e6f0fa; color: #2b6cb0; }
+    .btn-eliminar { background-color: #ffebeb; color: #c53030; }
+    .btn-back { display: inline-block; text-align: center; margin-top: 25px; color: #888; text-decoration: none; font-size: 14px; }
     footer { width: 100%; background-color: #f3edf2; padding: 15px 0; text-align: center; font-size: 13px; color: #776a78; margin-top: 40px; }
-    footer p { margin: 4px 0; font-family: 'Poppins', sans-serif; }
 </style>
 </html>

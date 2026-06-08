@@ -36,20 +36,50 @@
             <tbody>
                 <tr><td>P001</td><td>Juan Perez</td><td>26</td><td>masculino</td><td>Penicilina</td><td>O+</td><td>AXA</td><td>hipertension</td><td>555-9901</td><td>activo</td><td>PERJ020110HDF</td></tr>
                 <tr><td>P002</td><td>Maria Garcia</td><td>30</td><td>femenino</td><td>ninguna</td><td>A-</td><td>Netlife</td><td>hipertension</td><td>555-9902</td><td>activo</td><td>GARM960515MDF</td></tr>
+                <tr><td>P003</td><td>Carlos Mendoza</td><td>45</td><td>masculino</td><td>Polvo</td><td>O-</td><td>GNP</td><td>diabetes</td><td>555-9903</td><td>activo</td><td>MENC790822HDF</td></tr>
+                <tr><td>P004</td><td>Ana Martinez</td><td>35</td><td>femenino</td><td>ninguna</td><td>B+</td><td>Inbursa</td><td>ninguno</td><td>555-9904</td><td>activo</td><td>MARA891105MDF</td></tr>
+                <tr><td>P005</td><td>Luis Rodriguez</td><td>50</td><td>masculino</td><td>Aspirina</td><td>A+</td><td>AXA</td><td>hipertension</td><td>555-9905</td><td>activo</td><td>RODL740312HDF</td></tr>
+                <tr><td>P006</td><td>Sofia Lopez</td><td>22</td><td>femenino</td><td>ninguna</td><td>O+</td><td>Seguros Monterrey</td><td>ninguno</td><td>555-9906</td><td>activo</td><td>LOPS040719MDF</td></tr>
+                <tr><td>P007</td><td>Pedro Gomez</td><td>60</td><td>masculino</td><td>Latex</td><td>AB+</td><td>MetLife</td><td>diabetes</td><td>555-9907</td><td>activo</td><td>GOMP640228HDF</td></tr>
+                <tr><td>P008</td><td>Lucia Fernandez</td><td>28</td><td>femenino</td><td>Penicilina</td><td>A-</td><td>GNP</td><td>ninguno</td><td>555-9908</td><td>activo</td><td>FERL961014MDF</td></tr>
+                <tr><td>P009</td><td>Diego Torres</td><td>19</td><td>masculino</td><td>ninguna</td><td>O+</td><td>AXA</td><td>asma</td><td>555-9909</td><td>activo</td><td>TORD051201HDF</td></tr>
+                <tr><td>P010</td><td>Elena Ramirez</td><td>41</td><td>femenino</td><td>Mariscos</td><td>B-</td><td>Mapfre</td><td>ninguno</td><td>555-9910</td><td>activo</td><td>RAME830125MDF</td></tr>
             </tbody>
         </table>
     </div>
 
-    <h2>Nuevos Registros</h2>
-    <div id="listaPacientes" style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 30px; width: 100%; max-width: 1100px;"></div>
+    <h2>Nuevos Registros (Base de Datos)</h2>
+    
+    <div style="width: 100%; max-width: 1100px; margin-bottom: 15px;">
+        <input type="text" id="inputBuscar" onkeyup="buscarPaciente()" placeholder="🔍 Buscar nuevo paciente por ID o Nombre..." style="width: 100%; max-width: 400px; padding: 10px 15px; border-radius: 20px; border: 1px solid #ca9ec3;">
+    </div>
+
+    <div class="contenedor-tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Género</th>
+                    <th>Alergias</th>
+                    <th>Tipo Sangre</th>
+                    <th>Aseguradora</th>
+                    <th>Antecedentes</th>
+                    <th>Tele. Meg.</th>
+                    <th>Estatus</th>
+                    <th>CURP</th>
+                    <th style="text-align: center;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaNuevosRegistrosCuerpo"></tbody>
+        </table>
+    </div>
 
     <div class="form-container">
-        <h3>Alta de Nuevo Paciente</h3>
-        <form id="formPaciente">
-            <div class="form-group">
-                <label>ID Paciente:</label>
-                <input type="text" id="id_pacientes" placeholder="Ej: P011" required>
-            </div>
+        <h3 id="formTitulo">Alta de Nuevo Paciente</h3>
+        <p id="formAvisoId" style="text-align: center; color: #ca9ec3; font-size: 13px; font-weight: bold; margin-top: -10px; margin-bottom: 20px;">* El ID se generará automáticamente (Autoincrement)</p>
+        <form id="formPaciente" onsubmit="event.preventDefault();">
             <div class="form-group">
                 <label>Nombre:</label>
                 <input type="text" id="nombre" placeholder="Ej: Alan Torres" required>
@@ -90,7 +120,8 @@
                 <label>CURP:</label>
                 <input type="text" id="curp" placeholder="18 caracteres" required>
             </div>
-            <button type="button" class="btn-submit" onclick="agregarPaciente()">Dar de alta al Paciente</button>
+            <button type="button" id="btnAccionForm" class="btn-submit" onclick="procesarFormulario()">Dar de alta al Paciente</button>
+            <button type="button" id="btnCancelarEdicion" class="btn-cancelar" onclick="cancelarEdicion()" style="display: none;">Cancelar Edición</button>
         </form>
     </div>
 
@@ -103,8 +134,185 @@
 </footer>
 
 <script>
+    // CAMBIO IMPORTANTE: Usamos ruta relativa /api/... para evitar problemas de CORS y puertos en entornos en la nube
+    const URL_API = '/api/pacientes';
+    let listaPacientesMemoria = []; 
+    let idPacienteEditando = null;  
+
+    window.onload = function() {
+        obtenerNuevosPacientes();
+    };
+
+    async function obtenerNuevosPacientes() {
+        try {
+            const respuesta = await fetch(URL_API);
+            listaPacientesMemoria = await respuesta.json();
+            renderizarTabla(listaPacientesMemoria);
+        } catch (error) {
+            console.error("Error al cargar nuevos pacientes:", error);
+        }
+    }
+
+    function renderizarTabla(pacientes) {
+        const tbody = document.getElementById("tablaNuevosRegistrosCuerpo");
+        tbody.innerHTML = ""; 
+
+        pacientes.forEach(paciente => {
+            // Protección por si viene un registro roto de pruebas anteriores sin un ID de mongo asignado
+            const idSeguro = paciente._id ? paciente._id : 'id_invalido';
+
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td><strong>${paciente.id_pacientes || 'S/N'}</strong></td>
+                <td>${paciente.nombre || ''}</td>
+                <td>${paciente.edad || ''}</td>
+                <td>${paciente.genero || ''}</td>
+                <td>${paciente.alergias || ''}</td>
+                <td>${paciente.tipo_de_sangre || ''}</td>
+                <td>${paciente.aseguradora || ''}</td>
+                <td>${paciente.antecedentes || ''}</td>
+                <td>${paciente.tel_emergencias || ''}</td>
+                <td>${paciente.estatus || ''}</td>
+                <td>${paciente.curp || ''}</td>
+                <td style="text-align: center; min-width: 150px;">
+                    <button class="btn-accion-tabla btn-editar" onclick="prepararEdicion('${idSeguro}', '${paciente.id_pacientes}', '${paciente.nombre}', ${paciente.edad}, '${paciente.genero}', '${paciente.alergias}', '${paciente.tipo_de_sangre}', '${paciente.aseguradora}', '${paciente.antecedentes}', '${paciente.tel_emergencias}', '${paciente.estatus}', '${paciente.curp}')">✏️ Editar</button>
+                    <button class="btn-accion-tabla btn-eliminar" onclick="eliminarPaciente('${idSeguro}')">🗑️ Borrar</button>
+                </td>
+            `;
+            tbody.appendChild(fila);
+        });
+    }
+
+    function buscarPaciente() {
+        const textoBusqueda = document.getElementById("inputBuscar").value.toLowerCase();
+        const pacientesFiltrados = listaPacientesMemoria.filter(paciente => {
+            const idMatch = paciente.id_pacientes ? paciente.id_pacientes.toLowerCase().includes(textoBusqueda) : false;
+            const nombreMatch = paciente.nombre ? paciente.nombre.toLowerCase().includes(textoBusqueda) : false;
+            return idMatch || nombreMatch;
+        });
+        renderizarTabla(pacientesFiltrados);
+    }
+
+    function procesarFormulario() {
+        if (idPacienteEditando) {
+            guardarCambiosPaciente();
+        } else {
+            agregarPaciente();
+        }
+    }
+
     async function agregarPaciente(){
-        let id_pacientes = document.getElementById("id_pacientes").value;
+        const datos = recolectarCampos();
+        if (!datos) return;
+
+        try {
+            const respuesta = await fetch(URL_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(datos),
+            });
+            const resultado = await respuesta.json();
+
+            if (respuesta.ok) {
+                alert("Correcto: " + resultado.mensaje);
+                document.getElementById("formPaciente").reset();
+                obtenerNuevosPacientes(); 
+            }
+        } catch (error) {
+            alert("Error de conexión al guardar.");
+        }
+    }
+
+    function prepararEdicion(_id, id_pacientes, nombre, edad, genero, alergias, tipo_de_sangre, aseguradora, antecedentes, tel_emergencias, estatus, curp) {
+        if(_id === 'id_invalido') {
+            alert("Este registro está corrupto o es de una prueba fallida anterior y no se puede editar. Por favor elimínalo.");
+            return;
+        }
+        idPacienteEditando = _id;
+        
+        document.getElementById("nombre").value = nombre;
+        document.getElementById("edad").value = edad;
+        document.getElementById("genero").value = genero;
+        document.getElementById("alergias").value = alergias;
+        document.getElementById("tipo_de_sangre").value = tipo_de_sangre;
+        document.getElementById("aseguradora").value = aseguradora;
+        document.getElementById("antecedentes").value = antecedentes;
+        document.getElementById("tel_emergencias").value = tel_emergencias;
+        document.getElementById("estatus").value = estatus;
+        document.getElementById("curp").value = curp;
+
+        document.getElementById("formTitulo").innerText = `Modificando Paciente (${id_pacientes})`;
+        document.getElementById("formAvisoId").innerText = "* Modificando un registro existente en la Base de Datos";
+        
+        const btnSubmit = document.getElementById("btnAccionForm");
+        btnSubmit.innerText = "Guardar Cambios";
+        btnSubmit.style.backgroundColor = "#4a90e2";
+
+        document.getElementById("btnCancelarEdicion").style.display = "block";
+        document.getElementById("formPaciente").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    async function guardarCambiosPaciente() {
+        const datos = recolectarCampos();
+        if (!datos) return;
+
+        try {
+            const respuesta = await fetch(`${URL_API}/${idPacienteEditando}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(datos),
+            });
+            const resultado = await respuesta.json();
+
+            if (respuesta.ok) {
+                alert(resultado.mensaje);
+                cancelarEdicion();
+                obtenerNuevosPacientes();
+            }
+        } catch (error) {
+            alert("No se pudieron guardar las modificaciones.");
+        }
+    }
+
+    async function eliminarPaciente(_id) {
+        if(_id === 'id_invalido') {
+            alert("Registro de prueba incompleto detectado. Se removerá de la vista.");
+            obtenerNuevosPacientes();
+            return;
+        }
+
+        if (!confirm("¿De verdad deseas eliminar permanentemente este registro de paciente?")) return;
+
+        try {
+            const respuesta = await fetch(`${URL_API}/${_id}`, { method: 'DELETE' });
+            const resultado = await respuesta.json();
+
+            if (respuesta.ok) {
+                alert(resultado.mensaje);
+                obtenerNuevosPacientes();
+                if (idPacienteEditando === _id) cancelarEdicion();
+            } else {
+                alert("Error del servidor: " + resultado.error);
+            }
+        } catch (error) {
+            alert("No se pudo conectar con el servidor para eliminar.");
+        }
+    }
+
+    function cancelarEdicion() {
+        idPacienteEditando = null;
+        document.getElementById("formPaciente").reset();
+        document.getElementById("formTitulo").innerText = "Alta de Nuevo Paciente";
+        document.getElementById("formAvisoId").innerText = "* El ID se generará automáticamente (Autoincrement)";
+        
+        const btnSubmit = document.getElementById("btnAccionForm");
+        btnSubmit.innerText = "Dar de alta al Paciente";
+        btnSubmit.style.backgroundColor = "#ca9ec3";
+        
+        document.getElementById("btnCancelarEdicion").style.display = "none";
+    }
+
+    function recolectarCampos() {
         let nombre = document.getElementById("nombre").value;
         let edad = document.getElementById("edad").value;
         let genero = document.getElementById("genero").value;
@@ -116,44 +324,11 @@
         let estatus = document.getElementById("estatus").value;
         let curp = document.getElementById("curp").value;
 
-        if(!id_pacientes || !nombre || !edad || !genero || !alergias || !tipo_de_sangre || !aseguradora || !antecedentes || !tel_emergencias || !estatus || !curp){
-            alert("Completa todos los campos");
-            return;
+        if(!nombre || !edad || !genero || !alergias || !tipo_de_sangre || !aseguradora || !antecedentes || !tel_emergencias || !estatus || !curp){
+            alert("Completa todos los campos obligatorios");
+            return null;
         }
-
-        const datosPaciente = { id_pacientes, nombre, edad, genero, alergias, tipo_de_sangre, aseguradora, antecedentes, tel_emergencias, estatus, curp };
-
-        try {
-            const respuesta = await fetch('http://localhost:5000/api/pacientes', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(datosPaciente),
-            });
-
-            const resultado = await respuesta.json();
-
-            if (respuesta.ok) {
-                let nuevaCard = document.createElement("div");
-                nuevaCard.classList.add("card");
-                nuevaCard.style.cssText = "background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); width: 250px; border-left: 5px solid #ca9ec3;";
-                nuevaCard.innerHTML = `
-                    <h3 style="margin: 0 0 10px 0; color: #3d2d3a;">${nombre}</h3>
-                    <p style="margin: 4px 0; font-size: 13px;"><strong>ID:</strong> ${id_pacientes}</p>
-                    <p style="margin: 4px 0; font-size: 13px;"><strong>Edad:</strong> ${edad}</p>
-                    <p style="margin: 4px 0; font-size: 13px;"><strong>Género:</strong> ${genero}</p>
-                    <p style="margin: 4px 0; font-size: 13px;"><strong>Estatus:</strong> ${estatus}</p>
-                `;
-                document.getElementById("listaPacientes").appendChild(nuevaCard);
-
-                document.getElementById("formPaciente").reset();
-                alert("Correcto: " + resultado.mensaje);
-            } else {
-                alert("Error al guardar en el servidor: " + resultado.error);
-            }
-        } catch (error) {
-            console.error("Error en la petición:", error);
-            alert("No se pudo conectar con el servidor backend. ¿Está encendido en la terminal?");
-        }
+        return { nombre, edad, genero, alergias, tipo_de_sangre, aseguradora, antecedentes, tel_emergencias, estatus, curp };
     }
 </script>
 
@@ -163,4 +338,29 @@
     body { font-family: "Poppins", sans-serif; background-color: #fcf8fb; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
     header { background-color: rgb(245, 220, 229); width: 100%; padding: 20px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
     h1 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0; font-size: 2rem; }
-    h2 { color: #3d2d3a; font-family: '
+    h2 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin-top: 20px; }
+    h3 { color: #3d2d3a; font-family: 'Jua', sans-serif; margin: 0 0 20px 0; font-size: 1.5rem; text-align: center; }
+    main { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 40px 20px; flex: 1; }
+    .contenedor-tabla { width: 100%; max-width: 1100px; overflow-x: auto; margin-bottom: 40px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    table { width: 100%; border-collapse: collapse; min-width: 900px; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; font-size: 14px; }
+    th { background-color: #ca9ec3; color: white; font-weight: 600; }
+    tr:nth-child(even) { background-color: #faf7fa; }
+    
+    .form-container { max-width: 500px; width: 100%; background: white; padding: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+    .form-group { margin-bottom: 22px; }
+    label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; font-size: 14px; }
+    input[type="text"], input[type="number"] { width: 100%; padding: 12px; border: 1px solid #e0d0dd; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 14px; background-color: #faf7fa; color: #333; }
+    
+    .btn-submit { background-color: #ca9ec3; color: white; border: none; padding: 14px 15px; width: 100%; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; font-family: "Poppins", sans-serif; transition: background 0.2s; }
+    .btn-submit:hover { opacity: 0.9; }
+    .btn-cancelar { background-color: #999; color: white; border: none; padding: 10px 15px; width: 100%; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; font-family: "Poppins", sans-serif; margin-top: 10px; }
+    
+    .btn-accion-tabla { border: none; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-family: 'Poppins', sans-serif; font-weight: bold; cursor: pointer; margin: 2px; }
+    .btn-editar { background-color: #e6f0fa; color: #2b6cb0; }
+    .btn-eliminar { background-color: #ffebeb; color: #c53030; }
+    
+    .btn-back { display: inline-block; text-align: center; margin-top: 25px; color: #888; text-decoration: none; font-size: 14px; }
+    footer { width: 100%; background-color: #f3edf2; padding: 15px 0; text-align: center; font-size: 13px; color: #776a78; margin-top: 40px; }
+</style>
+</html>
